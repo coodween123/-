@@ -666,15 +666,23 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
   /* плавный скролл колесом */
   var cur=scrollY,tar=scrollY,raf=0,own=false;
   function max(){return document.documentElement.scrollHeight-innerHeight}
-  function tick(){
-    var d=tar-cur;
-    if(Math.abs(d)>.4){cur+=d*.1;own=true;scrollTo(0,cur)}else if(own){cur=tar;scrollTo(0,cur);own=false}
+  var an=null;
+  function ease(t){return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2}
+  function tick(now){
+    if(an){
+      var t=Math.min(1,(now-an.t0)/an.dur);
+      cur=an.from+(an.to-an.from)*ease(t);own=true;scrollTo(0,cur);
+      if(t>=1){tar=cur=an.to;an=null;own=false}
+    }else{
+      var d=tar-cur;
+      if(Math.abs(d)>.4){cur+=d*.1;own=true;scrollTo(0,cur)}else if(own){cur=tar;scrollTo(0,cur);own=false}
+    }
     requestAnimationFrame(tick);
   }
   addEventListener('scroll',function(){if(!own){cur=tar=scrollY}},{passive:true});
   addEventListener('wheel',function(e){
     if(e.ctrlKey||Math.abs(e.deltaX)>Math.abs(e.deltaY))return;
-    e.preventDefault();
+    e.preventDefault();an=null;
     var dy=e.deltaMode===1?e.deltaY*32:e.deltaMode===2?e.deltaY*innerHeight:e.deltaY;
     tar=Math.max(0,Math.min(max(),tar+dy));
   },{passive:false});
@@ -684,7 +692,8 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
     var el=document.querySelector(a.getAttribute('href'));
     if(!el)return;
     e.preventDefault();
-    tar=Math.max(0,Math.min(max(),el.getBoundingClientRect().top+scrollY-84));
+    var to=Math.max(0,Math.min(max(),el.getBoundingClientRect().top+scrollY-84));
+    an={from:scrollY,to:to,t0:performance.now(),dur:Math.max(700,Math.min(1400,Math.abs(to-scrollY)*.45))};cur=scrollY;tar=to;
     if(history.replaceState)history.replaceState(null,'',a.getAttribute('href'));
   });
   requestAnimationFrame(tick);
