@@ -97,6 +97,9 @@ header.nav{background:var(--card);border-radius:999px;padding:8px 8px 8px 22px;d
   -webkit-mask-image:radial-gradient(circle 170px at var(--mx,50%) var(--my,50%),#000 0,#000 30%,transparent 100%);mask-image:radial-gradient(circle 170px at var(--mx,50%) var(--my,50%),#000 0,#000 30%,transparent 100%)}
 .word.hov::after{opacity:1}
 @media (prefers-reduced-motion:reduce){.rv,.hero-copy>*,.facts .fact,.hero-art circle:first-of-type{animation:none!important;transition:none!important}.js .rv:not(.in){opacity:1;transform:none}}
+.lead .lead-sub{font-size:16px;line-height:1.5;color:var(--mute);margin-top:16px;letter-spacing:0;font-weight:400}
+.cta-sub{font-size:17px;color:var(--on-black-mute);margin-top:18px;max-width:520px}
+.hero-pills{margin-top:18px;position:relative;z-index:2}
 /* hero */
 .hero{position:relative;overflow:hidden;min-height:560px;display:grid;grid-template-columns:1.25fr .75fr;gap:20px;align-items:end;padding:clamp(24px,4vw,56px)}
 .hero h1{font-size:clamp(40px,7.4vw,100px);line-height:.96;letter-spacing:-.045em;font-weight:600;position:relative;z-index:2}
@@ -393,10 +396,11 @@ header.nav{background:var(--card);border-radius:999px;padding:8px 8px 8px 22px;d
   </svg>
   <div class="hero-copy">
     <h1>Лендинг под ключ, который приводит <span class="chip"><img src="client1.jpg" alt="" style="object-position:50% 35%"><img src="client2.jpg" alt="" style="object-position:50% 40%"><img src="client3.jpg" alt="" style="object-position:50% 30%"><em><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></em></span>клиентов</h1>
-    <p class="sub">Вам не нужно разбираться в ИИ. Собираю сайт по отлаженному процессу: быстро, на уровне студии и дешевле.</p>
+    <p class="sub">Вы рассказываете о задаче, я исследую рынок, пишу текст, делаю дизайн и запускаю сайт. Вам не нужно разбираться в нейросетях, искать копирайтера и настраивать хостинг.</p>
+    <div class="pills hero-pills"><span class="pill">от 15 999 ₽</span><span class="pill">3 правки включены</span><span class="pill">Хостинг бесплатный</span></div>
     <div class="ctas">
       <a class="btn btn-lime" href="https://t.me/g_andl">Заказать сайт →</a>
-      <a class="btn btn-ghost" href="#cases">Смотреть кейсы</a>
+      <a class="btn btn-ghost" href="#cases">Смотреть работы</a>
     </div>
   </div>
   <div class="facts">
@@ -407,19 +411,19 @@ header.nav{background:var(--card);border-radius:999px;padding:8px 8px 8px 22px;d
 </section>
 
 <!-- BENEFITS -->
-<div class="sec-head"><div><p class="label" style="margin-bottom:14px">[ почему это удобно ]</p><h2>Вы рассказываете о бизнесе. Остальное беру на себя</h2></div></div>
+<div class="sec-head"><div><p class="label" style="margin-bottom:14px">[ почему это удобно ]</p><h2>Вы рассказываете о задаче. Остальное беру на себя</h2></div></div>
 <section class="grid3">
   <article class="card ben">
     <svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="26" fill="url(#ball)"/></svg>
-    <div><h3>Не нужно разбираться в ИИ</h3><p>Нейросети умеют многое, но без опыта выдают шаблонные сайты, которые не продают. Я знаю, что и как делать, а вы не тратите время на промты и правки.</p></div>
+    <div><h3>Без хлопот с ИИ</h3><p>Не нужно выбирать нейросеть, платить за подписки и учиться писать запросы. ИИ у меня рабочий инструмент, а за результат отвечаю я.</p></div>
   </article>
   <article class="card ben">
     <svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><g transform="translate(8 8) rotate(-10 24 24)"><rect width="48" height="48" rx="12" fill="url(#chrome2)"/></g></svg>
-    <div><h3>Процесс отлажен, срок короткий</h3><p>Анализ, исследование, структура, текст и сборка идут по отработанной схеме. Поэтому сайт готов быстро, а вы не ждёте месяцами.</p></div>
+    <div><h3>Всё в одном месте</h3><p>Исследование, структура, текст, дизайн и запуск. Не нужно искать отдельно дизайнера, копирайтера и того, кто опубликует сайт.</p></div>
   </article>
   <article class="card ben">
     <svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="20" fill="none" stroke="url(#chrome)" stroke-width="12"/></svg>
-    <div><h3>Качество проверяю сам, вручную</h3><p>Каждый экран, текст и ссылку проверяет дизайнер с опытом 5+ лет, победитель конкурсов. Сайт не выглядит «сделанным нейросетью».</p></div>
+    <div><h3>Проверено дизайнером</h3><p>Каждый экран, текст и ссылку я проверяю сам, прежде чем сдать работу.</p></div>
   </article>
 </section>
 
@@ -427,15 +431,15 @@ header.nav{background:var(--card);border-radius:999px;padding:8px 8px 8px 22px;d
 <div class="sec-head" id="services"><div><p class="label" style="margin-bottom:14px">[ услуги и цены ]</p><h2>Лендинг под ключ</h2></div><p>Цена фиксируется после короткого брифа. Хостинг бесплатный, оплачивается только домен.</p></div>
 <section class="bento">
   <article class="card svc s1">
-    <div class="row"><div><h3>Лендинг</h3><p>Один сайт на одну задачу. Готов быстро и продаёт уже с первого экрана.</p></div><a class="arrow" href="https://t.me/g_andl" aria-label="Заказать лендинг"><svg viewBox="0 0 16 16"><path d="M3 13L13 3M5 3h8v8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a></div>
+    <div class="row"><div><h3>Лендинг</h3><p>Одна страница под одну задачу: услуга, запуск, мероприятие или портфолио.</p></div><a class="arrow" href="https://t.me/g_andl" aria-label="Заказать лендинг"><svg viewBox="0 0 16 16"><path d="M3 13L13 3M5 3h8v8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a></div>
     <div><div class="amount-row"><div class="amount">от 15 999 ₽</div><div class="was"><s>от 40 000 ₽</s><span>у дизайнера</span></div></div><div class="pills" style="margin-top:18px"><span class="pill">Запуски</span><span class="pill">Мероприятия</span><span class="pill">Услуги</span><span class="pill">Портфолио</span></div></div>
   </article>
   <article class="card dark svc s2">
     <div class="row"><div><h3>Что вы получаете</h3></div></div>
-    <ul class="list"><li><span>Анализ запроса и исследование</span><span>01</span></li><li><span>Мудборд и стиль</span><span>02</span></li><li><span>Структура и продающий текст</span><span>03</span></li><li><span>Дизайн, адаптив и запуск на GitHub</span><span>04</span></li></ul>
+    <ul class="list"><li><span>Анализ задачи и аудитории</span><span>01</span></li><li><span>Исследование и мудборд</span><span>02</span></li><li><span>Структура и продающий текст</span><span>03</span></li><li><span>Дизайн и адаптация под телефон</span><span>04</span></li><li><span>Сборка, проверка и публикация</span><span>05</span></li></ul>
   </article>
   <article class="card svc s4">
-    <div class="row"><div><h3>Правки и запуск</h3><p>До 3 правок бесплатно. Дальше каждые 3 правки стоят 2 000 ₽. Запуск сайта на вашем домене беру на себя.</p></div></div>
+    <div class="row"><div><h3>Правки и запуск</h3><p>3 правки включены, каждые следующие 3 стоят 2 000 ₽. Мои ошибки исправляю бесплатно 14 дней после сдачи. Хостинг бесплатный, домен оплачивается отдельно. Точную цену и срок называю до старта.</p></div></div>
     <div class="pills"><span class="pill">3 правки включены</span><span class="pill">+2 000 ₽ за каждые 3</span><span class="pill">Хостинг бесплатный</span></div>
   </article>
 </section>
@@ -465,7 +469,7 @@ header.nav{background:var(--card);border-radius:999px;padding:8px 8px 8px 22px;d
 <section class="about">
   <figure class="card photo" aria-label="Фото Георгия Андюла"><img src="me.jpg" alt="Георгий Андюл"><figcaption class="pill lime">Георгий Андюл</figcaption></figure>
   <div class="about-r">
-    <article class="card lead"><p>Графический дизайнер с опытом 5+ лет, магистрант по направлению «Дизайн». Делаю сайты с помощью ИИ по отлаженному процессу: быстро, доступно и на уровне сильной студии.</p></article>
+    <article class="card lead"><p>Графический дизайнер, магистрант по направлению «Дизайн». Объединяю дизайн, исследование и маркетинговое мышление: прежде чем оформлять страницу, разбираюсь, для кого она и к какому действию должна привести.</p><p class="lead-sub">ИИ использую, чтобы ускорять рутину. Решения по структуре, тексту и дизайну принимаю сам.</p></article>
     <div class="tiles">
       <article class="card tile"><b>5+ лет</b><span>в графическом дизайне</span></article>
       <article class="card tile dark"><b>Работал с крупными российскими брендами</b><span>X5 Group, Перекрёсток, Островок, Smartfon и многие другие компании</span></article>
@@ -476,7 +480,7 @@ header.nav{background:var(--card);border-radius:999px;padding:8px 8px 8px 22px;d
 </section>
 
 <!-- ADS -->
-<div class="sec-head" id="practice"><div><p class="label" style="margin-bottom:14px">[ практический опыт ]</p><h2>Умею не только делать сайты, но и приводить на них людей</h2></div><p>Свежие кейсы 2026 для КГПИ КемГУ. Результат получен даже с небольшим бюджетом. Листайте стрелками.</p></div>
+<div class="sec-head" id="practice"><div><p class="label" style="margin-bottom:14px">[ практический опыт ]</p><h2>Умею не только делать сайты, но и приводить на них людей</h2></div><p>Свежие кейсы 2026 для КГПИ КемГУ. Результат получен даже с небольшим бюджетом. Это показатели рекламы, а не заявки или продажи.</p></div>
 <section class="ads">
   <div class="card dark car" id="adsCar" aria-roledescription="карусель" aria-label="Рекламные кейсы">
     <div class="car-head">
@@ -507,16 +511,16 @@ header.nav{background:var(--card);border-radius:999px;padding:8px 8px 8px 22px;d
 </section>
 
 <!-- PROCESS -->
-<div class="sec-head" id="process"><div><p class="label" style="margin-bottom:14px">[ как мы работаем ]</p><h2>От запроса до запуска</h2></div><p>От вас только рассказ о бизнесе и согласование. Остальное делаю я.</p></div>
+<div class="sec-head" id="process"><div><p class="label" style="margin-bottom:14px">[ как мы работаем ]</p><h2>От запроса до запуска</h2></div><p>Каждый этап согласуем с вами. Техническое задание готовить не нужно.</p></div>
 <section class="card">
   <div class="tl">
     <div class="tl-cols"><i>этап 1</i><i>этап 2</i><i>этап 3</i><i>этап 4</i><i>этап 5</i></div>
     <div class="tl-rows">
-      <div class="tp"><b>Анализ запроса</b>Разбираю задачу, аудиторию и цель сайта</div>
-      <div class="tp"><b>Исследование</b>Первичное: собираю информацию о вас. Вторичное: изучаю рынок и готовые решения</div>
-      <div class="tp"><b>Мудборд и стиль</b>Показываю направление, и мы вместе выбираем стиль</div>
-      <div class="tp"><b>Структура и текст</b>Составляю структуру и пишу продающий текст</div>
-      <div class="tp l"><b>Сайт и запуск</b>Собираю, презентую и запускаю на GitHub</div>
+      <div class="tp"><b>Обсуждаем задачу</b>Цель, аудитория, желаемое действие посетителя</div>
+      <div class="tp"><b>Изучаю материалы</b>Собираю аргументы и сведения для страницы</div>
+      <div class="tp"><b>Выбираем стиль</b>Показываю мудборд, согласовываем направление</div>
+      <div class="tp"><b>Структура и тексты</b>Блоки, преимущества, призывы к действию</div>
+      <div class="tp l"><b>Сборка и запуск</b>Проверка на телефоне и компьютере, публикация, домен</div>
     </div>
   </div>
 </section>
@@ -539,19 +543,24 @@ header.nav{background:var(--card);border-radius:999px;padding:8px 8px 8px 22px;d
 <!-- FAQ -->
 <section class="card faq" id="faq">
   <h2 style="margin-bottom:28px">Частые вопросы</h2>
-  <details><summary>Почему не собрать сайт в ИИ самому?</summary><p>Можно, но это дорого по времени и нервам. Нужно выбрать нейросеть, оплатить подписку или токены, а часть сервисов в России может быть недоступна без VPN и зарубежной карты. Затем нужно научиться писать запросы, разбираться в правках, проверять результат на телефоне, разместить сайт, подключить домен и всё настроить. Я беру это на себя: вы получаете готовый запущенный сайт и платите один раз за результат, без подписок, токенов и часов на разбирательства.</p></details>
-  <details><summary>Почему дешевле, чем у студий?</summary><p>Отлаженный процесс и ИИ убирают рутину, на которую студии тратят недели. Вы платите за результат, а не за часы. Исследование, текст и финальную проверку я делаю сам, поэтому качество не страдает.</p></details>
-  <details><summary>Где будет жить сайт и сколько стоит хостинг?</summary><p>Сайт размещается на GitHub Pages, и хостинг бесплатный. Вы платите только за домен, обычно несколько сотен рублей в год. Подключение домена и запуск делаю я.</p></details>
-  <details><summary>Что если нужны правки?</summary><p>До 3 правок входят в стоимость. Каждые следующие 3 правки стоят 2 000 ₽. В правки не входят ошибки, допущенные по моей вине: я исправляю их бесплатно в течение 14 дней с момента сдачи сайта.</p></details>
-  <details><summary>Сколько по времени?</summary><p>Благодаря отлаженному процессу сайт делается в кратчайшие сроки. Точную дату назову после короткого брифа.</p></details>
-  <details><summary>А если нужен интернет-магазин или сайт на много страниц?</summary><p>Я делаю только лендинги. Интернет-магазины и большие многостраничные сайты я не делаю, лучше обратиться к другому дизайнеру или разработчику. Лендинг под ваш запуск, мероприятие или услугу сделаю быстро и продающе.</p></details>
+  <details><summary>Почему не сделать сайт в ИИ самому?</summary><p>Можно, но придётся выбрать нейросеть, оплатить подписку или токены (часть сервисов в России может быть недоступна без VPN и зарубежной карты), научиться писать запросы, разбираться в правках, проверять сайт на телефоне, разместить его, подключить домен и всё настроить. Я беру это на себя: вы получаете готовый запущенный сайт и платите один раз.</p></details>
+  <details><summary>Почему дешевле, чем в студии?</summary><p>Работаю один и использую ИИ на рутинных этапах, поэтому у меня меньше затрат. Структуру, тексты, дизайн и проверку делаю сам.</p></details>
+  <details><summary>Что входит в стоимость от 15 999 ₽?</summary><p>Анализ, исследование, мудборд, структура и тексты, дизайн, адаптация под телефон, публикация на GitHub Pages, 3 правки. Домен оплачивается отдельно.</p></details>
+  <details><summary>Где будет сайт и сколько стоит хостинг?</summary><p>Сайт размещается на GitHub Pages, хостинг бесплатный. Платите только за домен (обычно несколько сотен рублей в год), подключить его помогу.</p></details>
+  <details><summary>Будет ли сайт работать на телефоне?</summary><p>Да, адаптирую и проверяю. Вид в очень старых браузерах может отличаться.</p></details>
+  <details><summary>Что с правками?</summary><p>3 правки включены, каждые следующие 3 стоят 2 000 ₽. Большие изменения (новая концепция, новые разделы) оцениваются отдельно. Мои ошибки исправляю бесплатно 14 дней после сдачи сайта.</p></details>
+  <details><summary>Сколько по времени?</summary><p>Зависит от задачи и готовности материалов. Срок называю до начала работы.</p></details>
+  <details><summary>Делаете магазины и большие сайты?</summary><p>Нет, я делаю только лендинги. Для магазина или многостраничного сайта лучше обратиться к другому дизайнеру или разработчику.</p></details>
+  <details><summary>Нужно ли техническое задание?</summary><p>Нет, достаточно рассказать о задаче. Я задам вопросы и помогу сформулировать цель страницы.</p></details>
+  <details><summary>Гарантируете продажи?</summary><p>Нет: они зависят ещё и от продукта, цены, спроса и трафика. Моя задача сделать страницу понятной, убедительной и соответствующей цели.</p></details>
+  <details><summary>Как проходит оплата?</summary><p>Работаю по схеме 50% до начала и 50% после сдачи. Условия фиксируются в оферте.</p></details>
   <details><summary>Как мы будем общаться?</summary><p>В Telegram или ВКонтакте, как вам удобнее. Основные решения фиксируем письменно.</p></details>
 </section>
 
 <!-- CONTACT -->
 <section class="card dark cta" id="contact">
   <div class="cta-top">
-    <div><p class="label" style="margin-bottom:18px">[ контакты ]</p><h2>Расскажите о бизнесе. Остальное беру на себя</h2></div>
+    <div><p class="label" style="margin-bottom:18px">[ контакты ]</p><h2>Расскажите, что хотите запустить</h2><p class="cta-sub">Опишите задачу в нескольких предложениях. Первое обсуждение без обязательств.</p></div>
     <div class="contacts">
       <a href="https://t.me/g_andl"><span>Telegram</span><span>@g_andl ↗</span></a>
       <a href="https://vk.com/g_andl"><span>ВКонтакте</span><span>vk.com/g_andl ↗</span></a>
