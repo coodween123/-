@@ -107,6 +107,8 @@ header.nav{background:var(--card);border-radius:999px;padding:8px 8px 8px 22px;d
 .hero-card small{font-size:13px;color:var(--on-black-mute)}
 .hc-btns{display:flex;gap:8px;flex-wrap:wrap}
 .hc-btns .btn{height:44px;padding:0 18px;font-size:14px}
+#practice,#process{flex-direction:column;align-items:flex-start;gap:14px}
+#practice p,#process p{max-width:900px}
 /* hero */
 .hero{position:relative;overflow:hidden;min-height:560px;display:grid;grid-template-columns:1.25fr .75fr;gap:20px;align-items:end;padding:clamp(24px,4vw,56px)}
 .hero h1{font-size:clamp(40px,7.4vw,100px);line-height:.96;letter-spacing:-.045em;font-weight:600;position:relative;z-index:2}
@@ -404,7 +406,7 @@ header.nav{background:var(--card);border-radius:999px;padding:8px 8px 8px 22px;d
   </svg>
   <div class="hero-copy">
     <h1>Сайт под ключ, который приводит <span class="chip"><img src="client1.jpg" alt="" style="object-position:50% 35%"><img src="client2.jpg" alt="" style="object-position:50% 40%"><img src="client3.jpg" alt="" style="object-position:50% 30%"><em><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></em></span>клиентов</h1>
-    <p class="sub">Вы рассказываете о задаче, остальное делаю я: исследование, текст, дизайн и запуск.</p>
+    <p class="sub">Вы рассказываете о задаче, остальное делаю я:<br>исследование, текст, дизайн и запуск.</p>
     <p class="hero-meta">от 15 999 ₽ · 3 правки включены · хостинг бесплатный</p>
   </div>
   <div class="hero-ctas"><a class="btn btn-lime" href="https://t.me/g_andl">Заказать сайт →</a><a class="btn btn-ghost" href="#cases">Смотреть работы</a></div>
@@ -468,7 +470,7 @@ header.nav{background:var(--card);border-radius:999px;padding:8px 8px 8px 22px;d
 <section class="about">
   <figure class="card photo" aria-label="Фото Георгия Андюла"><img src="me.jpg" alt="Георгий Андюл"><figcaption class="pill lime">Георгий Андюл</figcaption></figure>
   <div class="about-r">
-    <article class="card lead"><p>Графический дизайнер, магистрант по направлению «Дизайн». Прежде чем оформлять страницу, разбираюсь, для кого она и к какому действию должна привести.</p><p class="lead-sub">ИИ использую, чтобы ускорять рутину. Решения по структуре, тексту и дизайну принимаю сам.</p></article>
+    <article class="card lead"><p>Графический дизайнер, магистрант по направлению «Дизайн».<br>Прежде чем оформлять страницу, разбираюсь, для кого она и к какому действию должна привести.</p><p class="lead-sub">ИИ использую, чтобы ускорять рутину.<br>Решения по структуре, тексту и дизайну принимаю сам.</p></article>
     <div class="tiles">
       <article class="card tile"><b>5+ лет</b><span>в графическом дизайне</span></article>
       <article class="card tile dark"><b>Работал с крупными российскими брендами</b><span>X5 Group, Перекрёсток, Островок, Smartfon и другие</span></article>
@@ -479,7 +481,7 @@ header.nav{background:var(--card);border-radius:999px;padding:8px 8px 8px 22px;d
 </section>
 
 <!-- ADS -->
-<div class="sec-head" id="practice"><div><p class="label" style="margin-bottom:14px">[ практический опыт ]</p><h2>Умею не только делать сайты, но и приводить на них людей</h2></div><p>Свежие кейсы 2026 для КГПИ КемГУ, даже с небольшим бюджетом. Это показатели рекламы, а не продажи.</p></div>
+<div class="sec-head" id="practice"><div><p class="label" style="margin-bottom:14px">[ практический опыт ]</p><h2>Умею не только делать сайты, но и приводить на них людей</h2></div><p>Свежие кейсы 2026 для КГПИ КемГУ, даже с небольшим бюджетом.<br>Это показатели рекламы, а не продажи.</p></div>
 <section class="ads">
   <div class="card dark car" id="adsCar" aria-roledescription="карусель" aria-label="Рекламные кейсы">
     <div class="car-head">
@@ -510,7 +512,7 @@ header.nav{background:var(--card);border-radius:999px;padding:8px 8px 8px 22px;d
 </section>
 
 <!-- PROCESS -->
-<div class="sec-head" id="process"><div><p class="label" style="margin-bottom:14px">[ как мы работаем ]</p><h2>От запроса до запуска</h2></div><p>Каждый этап согласуем с вами. Техническое задание готовить не нужно.</p></div>
+<div class="sec-head" id="process"><div><p class="label" style="margin-bottom:14px">[ как мы работаем ]</p><h2>От запроса до запуска</h2></div><p>Каждый этап согласуем с вами.<br>Техническое задание готовить не нужно.</p></div>
 <section class="card">
   <div class="tl">
     <div class="tl-cols"><i>этап 1</i><i>этап 2</i><i>этап 3</i><i>этап 4</i><i>этап 5</i></div>
@@ -554,7 +556,7 @@ header.nav{background:var(--card);border-radius:999px;padding:8px 8px 8px 22px;d
 <!-- CONTACT -->
 <section class="card dark cta" id="contact">
   <div class="cta-top">
-    <div><p class="label" style="margin-bottom:18px">[ контакты ]</p><h2>Расскажите, что хотите запустить</h2><p class="cta-sub">Опишите задачу в нескольких предложениях. Первое обсуждение без обязательств.</p></div>
+    <div><p class="label" style="margin-bottom:18px">[ контакты ]</p><h2>Расскажите, что хотите запустить</h2><p class="cta-sub">Опишите задачу в нескольких предложениях.<br>Первое обсуждение без обязательств.</p></div>
     <div class="contacts">
       <a href="https://t.me/g_andl"><span>Telegram</span><span>@g_andl ↗</span></a>
       <a href="https://vk.com/g_andl"><span>ВКонтакте</span><span>vk.com/g_andl ↗</span></a>
