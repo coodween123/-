@@ -43,6 +43,8 @@ h3{font-size:clamp(20px,2vw,26px);line-height:1.12;letter-spacing:-.02em;font-we
 .btn-ink{background:var(--ink);color:var(--bg)}
 .btn-ghost{background:rgba(255,255,255,.1);color:var(--on-black)}
 .pills{display:flex;flex-wrap:wrap;gap:8px}
+.promo{display:inline-flex;align-self:flex-start;align-items:center;min-height:32px;padding:6px 14px;margin-bottom:14px;border-radius:999px;background:var(--lime);color:var(--on-lime);font-size:13px;font-weight:600;line-height:1.25}
+.plan .promo{margin-bottom:0}
 .pill{display:inline-flex;align-items:center;height:32px;padding:0 14px;border-radius:999px;border:1px solid var(--line);font-size:13px;color:var(--ink);background:transparent}
 .pill.fill{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .dark .pill{border-color:rgba(255,255,255,.2);color:var(--on-black)}
@@ -437,7 +439,7 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
 <section class="bento">
   <article class="card svc s1">
     <div class="row"><div><h3>Одностраничный сайт</h3><p>Одна страница под одну задачу: услуга, запуск, мероприятие или портфолио.</p></div><a class="arrow" href="https://t.me/g_andl" aria-label="Заказать сайт"><svg viewBox="0 0 16 16"><path d="M3 13L13 3M5 3h8v8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a></div>
-    <div><div class="amount-row"><div class="amount">от 15 999 ₽</div><div class="was"><s>от 40 000 ₽</s><span>у дизайнера</span></div></div><div class="pills" style="margin-top:18px"><span class="pill">Запуски</span><span class="pill">Мероприятия</span><span class="pill">Услуги</span><span class="pill">Портфолио</span></div></div>
+    <div><span class="promo">Первым 5 клиентам. Потом 20&nbsp;999&nbsp;₽</span><div><div class="amount-row"><div class="amount">от 15 999 ₽</div><div class="was"><s>от 40 000 ₽</s><span>у дизайнера</span></div></div><div class="pills" style="margin-top:18px"><span class="pill">Запуски</span><span class="pill">Мероприятия</span><span class="pill">Услуги</span><span class="pill">Портфолио</span></div></div>
   </article>
   <article class="card dark svc s2">
     <div class="row"><div><h3>Что вы получаете</h3></div></div>
@@ -536,6 +538,7 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
     <article class="plan">
       <h3>Одностраничный сайт</h3>
       <p class="d">Для запусков, мероприятий, услуг и портфолио.</p>
+      <span class="promo">Первым 5 клиентам. Потом 20&nbsp;999&nbsp;₽</span>
       <div class="amount-row"><div class="amount">от 15 999 ₽</div><div class="was"><s>от 40 000 ₽</s><span>у дизайнера</span></div></div>
       <ul class="checks"><li>Исследование, мудборд и стиль</li><li>Структура и продающий текст</li><li>Дизайн, адаптив и запуск на GitHub</li></ul>
       <div class="foot"><span class="p">Правки: 3 бесплатно, затем 2 000 ₽ за 3</span><a class="btn btn-ink" href="https://t.me/g_andl">Оставить заявку</a></div>
