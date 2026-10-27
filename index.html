@@ -364,7 +364,6 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
 
 .promo-pop{position:fixed;right:20px;bottom:24px;z-index:60;width:300px;padding:18px 20px 16px;border-radius:24px;background:var(--black);color:var(--on-black);box-shadow:0 18px 48px rgba(0,0,0,.32);overflow:hidden;opacity:0;transform:translateX(28px);pointer-events:none;transition:opacity .4s,transform .4s}
 .promo-pop.show{opacity:1;transform:none;pointer-events:auto}
-.promo-pop .art{position:absolute;right:-34px;bottom:-40px;width:120px;height:120px;pointer-events:none;opacity:.5}
 .promo-pop .tag{position:relative;font-family:var(--mono);font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:var(--on-black-mute)}
 .promo-pop b{position:relative;display:block;margin-top:8px;font-size:19px;font-weight:600;line-height:1.2;letter-spacing:-.02em;padding-right:30px}
 .promo-pop p{position:relative;margin-top:6px;font-size:13px;line-height:1.35;color:var(--on-black-mute)}
@@ -380,7 +379,7 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
 .promo-pop.run .bars i::after{animation:pdrain 1s linear forwards;animation-delay:calc(var(--k)*1s)}
 @keyframes pdrain{to{transform:scaleX(0)}}
 .promo-pop .left{position:relative;margin-top:7px;font-family:var(--mono);font-size:11px;color:var(--on-black-mute)}
-@media (max-width:640px){.promo-pop{right:10px;bottom:12px;width:min(236px,calc(100vw - 20px));padding:14px 16px 13px;border-radius:20px}.promo-pop b{font-size:16px}.promo-pop .pr strong{font-size:22px}.promo-pop .art{width:90px;height:90px;right:-26px;bottom:-30px}}
+@media (max-width:640px){.promo-pop{right:10px;bottom:12px;width:min(236px,calc(100vw - 20px));padding:14px 16px 13px;border-radius:20px}.promo-pop b{font-size:16px}.promo-pop .pr strong{font-size:22px}}
 @media (prefers-reduced-motion:reduce){.promo-pop{transition:none;transform:none}}
 </style>
 </head><body>
@@ -722,12 +721,11 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
 })();
 </script>
 <div class="promo-pop" id="promoPop" role="status" aria-live="polite">
-<svg class="art" viewBox="0 0 130 130" aria-hidden="true"><defs><linearGradient id="pg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6b6b74"/><stop offset=".5" stop-color="#e9e9ee"/><stop offset="1" stop-color="#4a4a52"/></linearGradient></defs><circle cx="70" cy="62" r="34" fill="none" stroke="url(#pg)" stroke-width="16" opacity=".9"/><circle cx="104" cy="30" r="12" fill="#FFD21F"/></svg>
 <button class="x" type="button" aria-label="Закрыть">×</button>
 <div class="tag">[ акция ]</div>
-<b>Скидка на лендинг под ключ</b>
-<p>Одностраничный сайт для запуска, услуги или мероприятия. Скидка первым 5&nbsp;клиентам</p>
-<div class="pr"><strong>15&nbsp;999&nbsp;₽</strong><span>потом <s>20&nbsp;999&nbsp;₽</s></span></div>
+<b>Скидка на&nbsp;лендинг под&nbsp;ключ</b>
+<p>Одностраничный сайт для&nbsp;запуска, услуги или&nbsp;мероприятия. Скидка первым 5&nbsp;клиентам</p>
+<div class="pr"><strong>15&nbsp;999&nbsp;₽</strong><span>потом&nbsp;<s>20&nbsp;999&nbsp;₽</s></span></div>
 <div class="bars"><i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i><i style="--k:4"></i><i style="--k:5"></i><i style="--k:6"></i><i style="--k:7"></i><i style="--k:8"></i><i style="--k:9"></i></div>
 <div class="left">закроется через <span id="promoLeft">10</span> с</div>
 </div>
