@@ -413,11 +413,10 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
 .promo-pop .pr s{text-decoration-thickness:2px}
 .promo-pop .x{position:absolute;top:10px;right:10px;z-index:2;width:26px;height:26px;border:0;border-radius:50%;background:rgba(255,255,255,.14);color:var(--on-black);font-size:16px;line-height:1;cursor:pointer;display:grid;place-items:center;padding:0}
 .promo-pop .x:hover{background:rgba(255,255,255,.26)}
-.promo-pop .bars{position:relative;display:flex;gap:3px;margin-top:14px}
-.promo-pop .bars i{position:relative;flex:1;height:5px;border-radius:3px;background:rgba(255,255,255,.16);overflow:hidden}
-.promo-pop .bars i::after{content:"";position:absolute;inset:0;background:var(--lime);transform-origin:right;transform:scaleX(1)}
-.promo-pop.run .bars i::after{animation:pdrain 1s linear forwards;animation-delay:calc(var(--k)*1s)}
-@keyframes pdrain{to{transform:scaleX(0)}}
+.promo-pop .bars{position:relative;margin-top:14px;height:6px;border-radius:3px;background:rgba(255,255,255,.16);overflow:hidden}
+.promo-pop .bars i{position:absolute;inset:0;border-radius:3px;background:var(--lime);transform-origin:left;transform:scaleX(0)}
+.promo-pop.run .bars i{animation:pfill 10s linear forwards}
+@keyframes pfill{to{transform:scaleX(1)}}
 .promo-pop .left{position:relative;margin-top:7px;font-family:var(--mono);font-size:11px;color:var(--on-black-mute)}
 @media (max-width:640px){.promo-pop{right:10px;bottom:12px;width:min(236px,calc(100vw - 20px));padding:14px 16px 13px;border-radius:20px}.promo-pop b{font-size:16px}.promo-pop .pr strong{font-size:22px}}
 @media (prefers-reduced-motion:reduce){.promo-pop{transition:none;transform:none}}
@@ -838,7 +837,7 @@ html.is-loading{overflow:hidden}
 <b>Скидка на&nbsp;лендинг под&nbsp;ключ</b>
 <p>Одностраничный сайт для&nbsp;запуска, услуги или&nbsp;мероприятия.<br>Скидка первым 5&nbsp;клиентам</p>
 <div class="pr"><strong>15&nbsp;999&nbsp;₽</strong><span>потом&nbsp;<s>20&nbsp;999&nbsp;₽</s></span></div>
-<div class="bars"><i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i><i style="--k:4"></i><i style="--k:5"></i><i style="--k:6"></i><i style="--k:7"></i><i style="--k:8"></i><i style="--k:9"></i></div>
+<div class="bars"><i></i></div>
 <div class="left">закроется через <span id="promoLeft">10</span> с</div>
 </div>
 <script>
