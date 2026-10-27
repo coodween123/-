@@ -782,6 +782,20 @@ html.is-loading{overflow:hidden}
   if(w&&window.matchMedia&&matchMedia('(hover:hover)').matches){
     w.addEventListener('pointermove',function(e){var r=w.getBoundingClientRect();w.style.setProperty('--mx',(e.clientX-r.left)+'px');w.style.setProperty('--my',(e.clientY-r.top)+'px');w.classList.add('hov')});
     w.addEventListener('pointerleave',function(){w.classList.remove('hov')});
+  }else if(w&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){
+    var run=false,t0=0;
+    var glow=function(t){
+      if(!run)return;
+      if(!t0)t0=t;
+      var r=w.getBoundingClientRect(),k=(t-t0)/1000,W=r.width,H=r.height;
+      w.style.setProperty('--mx',(W*(.5+.5*Math.sin(k*.9)))+'px');
+      w.style.setProperty('--my',(H*(.5+.22*Math.sin(k*1.7)))+'px');
+      requestAnimationFrame(glow);
+    };
+    new IntersectionObserver(function(es){
+      run=es[0].isIntersecting;
+      if(run){w.classList.add('hov');t0=0;requestAnimationFrame(glow)}else{w.classList.remove('hov')}
+    },{threshold:.2}).observe(w);
   }
 })();
 </script>
