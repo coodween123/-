@@ -1,8 +1,8 @@
 {
  "name": "Георгий Андюл — сайт под ключ",
  "short_name": "Андюл",
- "start_url": "/site/",
- "scope": "/site/",
+ "start_url": "/",
+ "scope": "/",
  "display": "standalone",
  "background_color": "#0B0B0D",
  "theme_color": "#0B0B0D",
