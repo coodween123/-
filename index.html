@@ -364,7 +364,7 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
 
 .promo-pop{position:fixed;right:20px;bottom:24px;z-index:60;width:300px;padding:18px 20px 16px;border-radius:24px;background:var(--black);color:var(--on-black);box-shadow:0 18px 48px rgba(0,0,0,.32);overflow:hidden;opacity:0;transform:translateX(28px);pointer-events:none;transition:opacity .4s,transform .4s}
 .promo-pop.show{opacity:1;transform:none;pointer-events:auto}
-.promo-pop .art{position:absolute;right:-30px;bottom:34px;width:120px;height:120px;pointer-events:none;opacity:.85}
+.promo-pop .art{position:absolute;right:-34px;bottom:-40px;width:120px;height:120px;pointer-events:none;opacity:.5}
 .promo-pop .tag{position:relative;font-family:var(--mono);font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:var(--on-black-mute)}
 .promo-pop b{position:relative;display:block;margin-top:8px;font-size:19px;font-weight:600;line-height:1.2;letter-spacing:-.02em;padding-right:30px}
 .promo-pop p{position:relative;margin-top:6px;font-size:13px;line-height:1.35;color:var(--on-black-mute)}
@@ -376,11 +376,11 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
 .promo-pop .x:hover{background:rgba(255,255,255,.26)}
 .promo-pop .bars{position:relative;display:flex;gap:3px;margin-top:14px}
 .promo-pop .bars i{position:relative;flex:1;height:5px;border-radius:3px;background:rgba(255,255,255,.16);overflow:hidden}
-.promo-pop .bars i::after{content:"";position:absolute;inset:0;background:var(--lime);transform-origin:left;transform:scaleX(1)}
+.promo-pop .bars i::after{content:"";position:absolute;inset:0;background:var(--lime);transform-origin:right;transform:scaleX(1)}
 .promo-pop.run .bars i::after{animation:pdrain 1s linear forwards;animation-delay:calc(var(--k)*1s)}
 @keyframes pdrain{to{transform:scaleX(0)}}
 .promo-pop .left{position:relative;margin-top:7px;font-family:var(--mono);font-size:11px;color:var(--on-black-mute)}
-@media (max-width:640px){.promo-pop{right:10px;bottom:12px;width:min(236px,calc(100vw - 20px));padding:14px 16px 13px;border-radius:20px}.promo-pop b{font-size:16px}.promo-pop .pr strong{font-size:22px}.promo-pop .art{width:90px;height:90px;right:-24px;bottom:30px}}
+@media (max-width:640px){.promo-pop{right:10px;bottom:12px;width:min(236px,calc(100vw - 20px));padding:14px 16px 13px;border-radius:20px}.promo-pop b{font-size:16px}.promo-pop .pr strong{font-size:22px}.promo-pop .art{width:90px;height:90px;right:-26px;bottom:-30px}}
 @media (prefers-reduced-motion:reduce){.promo-pop{transition:none;transform:none}}
 </style>
 </head><body>
