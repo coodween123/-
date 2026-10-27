@@ -401,6 +401,7 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
 
 .promo-pop{position:fixed;right:20px;bottom:24px;z-index:60;width:300px;padding:18px 20px 16px;border-radius:24px;background:var(--black);color:var(--on-black);box-shadow:0 18px 48px rgba(0,0,0,.32);overflow:hidden;opacity:0;transform:translateX(28px);pointer-events:none;transition:opacity .4s,transform .4s}
 .promo-pop.show{opacity:1;transform:none;pointer-events:auto}
+.promo-pop.out{opacity:0;transform:none;pointer-events:none;transition:opacity 1s ease}
 .promo-pop .tag{position:relative;font-family:var(--mono);font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:var(--on-black-mute)}
 .promo-pop b{position:relative;display:block;margin-top:8px;font-size:19px;font-weight:600;line-height:1.2;letter-spacing:-.02em;padding-right:30px}
 .promo-pop p{position:relative;margin-top:6px;font-size:13px;line-height:1.35;color:var(--on-black-mute)}
@@ -843,7 +844,7 @@ html.is-loading{overflow:hidden}
   var pop=document.getElementById('promoPop'),sec=document.querySelector('section.price');
   if(!pop||!sec||!('IntersectionObserver' in window))return;
   var left=document.getElementById('promoLeft'),T=10000,tick=null,end=null,shown=false;
-  function close(){pop.classList.remove('show');clearInterval(tick);clearTimeout(end)}
+  function close(){pop.classList.remove('show');pop.classList.add('out');clearInterval(tick);clearTimeout(end)}
   function open(){
     if(shown)return;shown=true;
     var t0=Date.now();
