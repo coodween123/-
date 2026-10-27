@@ -432,27 +432,50 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
 .r-cta-card p{max-width:560px;color:var(--on-black-mute)}
 @media (max-width:960px){.r-grid{grid-template-columns:repeat(2,1fr)}.job{grid-template-columns:1fr;gap:10px}.job .when{padding-top:0}.job .go{justify-self:start}.r-two{grid-template-columns:1fr}}
 @media (max-width:640px){.r-stats{grid-template-columns:1fr}.r-grid,.r-ach{grid-template-columns:1fr}.r-hero h1{font-size:clamp(40px,13vw,64px)}}
+
+.r-top{display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--card);border-radius:999px;padding:8px 8px 8px 22px;position:sticky;top:max(8px,env(safe-area-inset-top,0px));z-index:20}
+.r-top b{letter-spacing:-.02em}
+.r-top .btn{height:40px;padding:0 18px;font-size:14px}
+.r-hero2{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(24px,4vw,56px);align-items:center;padding:clamp(22px,4vw,56px)}
+.r-h-text{display:flex;flex-direction:column;align-items:flex-start;gap:18px}
+.r-open{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;background:rgba(255,210,31,.22);color:var(--ink);padding:7px 14px 7px 12px;border-radius:999px}
+.r-open i{width:8px;height:8px;border-radius:50%;background:#2BB673;box-shadow:0 0 0 4px rgba(43,182,115,.2)}
+.r-hero2 h1{font-size:clamp(44px,7vw,92px);line-height:.96;letter-spacing:-.045em;font-weight:600}
+.r-role2{font-size:clamp(18px,2.2vw,26px);font-weight:500;letter-spacing:-.02em;background:var(--lime);color:var(--on-lime);border-radius:999px;padding:6px 18px}
+.r-lead2{max-width:560px;font-size:clamp(16px,1.5vw,18px);color:var(--mute);line-height:1.5}
+.r-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%}
+.r-fact{border-radius:20px;background:var(--bg);padding:16px 18px}
+.r-fact b{display:block;font-size:clamp(22px,2.4vw,30px);font-weight:600;letter-spacing:-.03em;line-height:1.05}
+.r-fact span{display:block;margin-top:8px;font-size:13px;color:var(--mute);line-height:1.35}
+.btn-line{border:1px solid var(--line);color:var(--ink);background:transparent}
+.r-photo{margin:0;border-radius:28px;overflow:hidden;aspect-ratio:4/5;background:var(--black)}
+.r-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:38% 8%}
+.r-cta-card{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,5vw,64px);align-items:center;padding:clamp(26px,5vw,60px)}
+.r-cta-l{display:flex;flex-direction:column;gap:18px}
+.r-cta-l p{max-width:none}
+.r-links{display:flex;flex-direction:column}
+.r-links a{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 0;border-bottom:1px solid #2F2F34}
+.r-links a:first-child{border-top:1px solid #2F2F34}
+.r-links span{font-size:14px;color:var(--on-black-mute)}
+.r-links b{font-size:18px;font-weight:500;color:var(--on-black)}
+.r-links a:hover b{color:var(--lime)}
+@media (max-width:960px){.r-hero2{grid-template-columns:1fr}.r-photo{order:-1;aspect-ratio:4/3;max-height:420px}.r-cta-card{grid-template-columns:1fr}}
+@media (max-width:640px){.r-facts{grid-template-columns:1fr}.r-top{padding-left:18px}.r-photo{aspect-ratio:1/1}}
 </style>
 </head><body id="top">
 <div class="wrap">
-<header class="nav">
-  <a class="logo" href="/"><img decoding="async" src="/avatar.jpg" alt=""><span>Георгий Андюл</span></a>
-  <nav>
-    <a href="/#services">Услуги</a><a href="/#cases">Кейсы</a><a href="/#about">Обо мне</a><a href="/resume" class="on" aria-current="page">Резюме</a><a href="/#process">Процесс</a><a href="/#faq">Вопросы</a>
-  </nav>
-  <div class="nav-r"><a class="btn btn-ink" href="https://t.me/g_andl"><span>Написать<span class="hide-sm"> в Telegram</span></span></a><button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mnav"><i></i><i></i></button></div>
-
-  <div class="mnav" id="mnav" hidden>
-    <a href="/#services">Услуги</a><a href="/#cases">Кейсы</a><a href="/#about">Обо мне</a><a href="/resume" class="on" aria-current="page">Резюме</a><a href="/#process">Процесс</a><a href="/#faq">Вопросы</a><a href="/#contact">Контакты</a>
+<div class="r-top"><b>Георгий Андюл</b><a class="btn btn-ink" href="/">← На главную</a></div>
+<section class="card r-hero2">
+  <div class="r-h-text">
+    <span class="r-open"><i></i>Открыт к предложениям</span>
+    <p class="label">[ резюме ]</p>
+    <h1>Георгий Андюл</h1>
+    <div class="r-role2">Графический и&nbsp;веб-дизайнер</div>
+    <p class="r-lead2">Пять лет делаю визуал, который работает на&nbsp;бизнес: соцсети, сайты и&nbsp;рекламные креативы для&nbsp;вуза, агентств и&nbsp;брендов. Быстро вхожу в&nbsp;задачу и&nbsp;довожу работу до&nbsp;результата.</p>
+    <div class="r-facts"><div class="r-fact"><b>5 лет</b><span>в&nbsp;графическом и&nbsp;веб-дизайне</span></div><div class="r-fact"><b>9 отраслей</b><span>от&nbsp;IT и&nbsp;криптовалюты до&nbsp;психологии</span></div><div class="r-fact"><b>Крупные бренды</b><span>опыт работы с&nbsp;известными компаниями</span></div></div>
+    <div class="r-cta"><a class="btn btn-ink" href="https://t.me/g_andl" target="_blank" rel="noopener">Написать в&nbsp;Telegram →</a><a class="btn btn-line" href="/#cases">Смотреть работы</a></div>
   </div>
-</header>
-<section class="card dark r-hero">
-  <p class="label">[ резюме ]</p>
-  <h1>Георгий Андюл</h1>
-  <div class="r-role">Графический и&nbsp;веб-дизайнер</div>
-  <p class="r-lead">Пять лет делаю сайты, соцсети и&nbsp;рекламные креативы. Разрабатываю сильные бренды и&nbsp;запоминающиеся визуальные концепции, которые помогают компаниям достигать бизнес-целей.</p>
-  <div class="r-cta"><a class="btn btn-lime" href="https://t.me/g_andl" target="_blank" rel="noopener">Написать в&nbsp;Telegram →</a><a class="btn btn-out" href="/#services">Заказать сайт</a></div>
-  <div class="r-stats"><div class="r-stat"><b>5 лет</b><span>в&nbsp;графическом и&nbsp;веб-дизайне</span></div><div class="r-stat"><b>9 отраслей</b><span>от&nbsp;IT и&nbsp;криптовалюты до&nbsp;психологии</span></div><div class="r-stat"><b>5 команд</b><span>вуз, студия, медиаагентство, доставка, эксперт</span></div></div>
+  <figure class="r-photo"><img src="/me.jpg" alt="Георгий Андюл, графический и веб-дизайнер" width="1200" height="1200" fetchpriority="high"></figure>
 </section>
 
 <div class="sec-head"><div><p class="label" style="margin-bottom:14px">[ чем могу помочь ]</p><h2>Что делаю</h2></div></div>
@@ -465,7 +488,7 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
 
 <div class="sec-head" id="experience"><div><p class="label" style="margin-bottom:14px">[ опыт работы ]</p><h2>Где работал</h2></div></div>
 <section class="jobs">
-<article class="card job"><div class="when">Сентябрь 2021 —<br>настоящее время<br><em>сейчас</em></div><div><h3>КГПИ КемГУ</h3><div class="role">Графический и&nbsp;веб-дизайнер</div><p>Веду визуальную часть вуза: оформляю соцсети, делаю сайты и&nbsp;рекламные креативы. Пять лет в&nbsp;одной команде, от&nbsp;постов до&nbsp;кампаний набора.</p></div><a class="go" href="https://кгпи.рф" target="_blank" rel="noopener">кгпи.рф <svg viewBox="0 0 16 16"><path d="M3 13L13 3M5 3h8v8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a></article>
+<article class="card job"><div class="when">Сентябрь 2021 —<br>октябрь 2026</div><div><h3>КГПИ КемГУ</h3><div class="role">Графический и&nbsp;веб-дизайнер</div><p>Веду визуальную часть вуза: оформляю соцсети, делаю сайты и&nbsp;рекламные креативы. Пять лет в&nbsp;одной команде, от&nbsp;постов до&nbsp;кампаний набора.</p></div><a class="go" href="https://кгпи.рф" target="_blank" rel="noopener">кгпи.рф <svg viewBox="0 0 16 16"><path d="M3 13L13 3M5 3h8v8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a></article>
 <article class="card job"><div class="when">Декабрь 2024 —<br>апрель 2025<br></div><div><h3>Студия профориентации Юлии Хайминой</h3><div class="role">Графический дизайнер</div><p>Оформление соцсетей, баннеры и&nbsp;продукция для проведения мероприятий.</p></div><a class="go" href="https://vk.com/haymina_prof" target="_blank" rel="noopener">vk.com/haymina_prof <svg viewBox="0 0 16 16"><path d="M3 13L13 3M5 3h8v8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a></article>
 <article class="card job"><div class="when">Декабрь 2024 —<br>апрель 2025<br></div><div><h3>UL CITY MEDIA</h3><div class="role">Графический дизайнер, внештатно</div><p>Оформление социальных сетей для медиаагентства.</p></div><a class="go" href="https://ulcitymedia.ru" target="_blank" rel="noopener">ulcitymedia.ru <svg viewBox="0 0 16 16"><path d="M3 13L13 3M5 3h8v8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a></article>
 <article class="card job"><div class="when">Август 2024 —<br>март 2025<br></div><div><h3>СушиЛайк</h3><div class="role">Графический дизайнер</div><p>Рекламные креативы и&nbsp;упаковка всей продуктовой линейки.</p></div><a class="go" href="https://sushi-likes.ru" target="_blank" rel="noopener">sushi-likes.ru <svg viewBox="0 0 16 16"><path d="M3 13L13 3M5 3h8v8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a></article>
@@ -478,19 +501,27 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
 <div class="card r-box"><h3>Отрасли, где работал</h3><div class="pills"><span class="pill">Криптовалюта</span><span class="pill">Личный бренд</span><span class="pill">Отдых</span><span class="pill">IT</span><span class="pill">Доставка</span><span class="pill">Тренерство</span><span class="pill">Медиа</span><span class="pill">Психология</span><span class="pill">Маркетинг</span></div></div>
 </section>
 
-<div class="sec-head"><div><p class="label" style="margin-bottom:14px">[ достижения ]</p><h2>Чем могу подтвердить</h2></div></div>
+<div class="sec-head"><div><p class="label" style="margin-bottom:14px">[ достижения ]</p><h2>Достижения</h2></div></div>
 <section class="r-ach">
-<div class="card"><b>«Вместе Медиа» 2024</b><span>Победитель конкурса в&nbsp;номинации «Лучший брендинг».</span></div>
-<div class="card"><b>X5 Group, Перекрёсток, Островок, Smartfon</b><span>Работал с&nbsp;крупными российскими брендами.</span></div>
-<div class="card"><b>7&nbsp;845 переходов на&nbsp;сайт</b><span>Летняя кампания набора 2026 для КГПИ КемГУ: 112&nbsp;126 показов во&nbsp;ВКонтакте и&nbsp;Яндекс Директ. Это показатели рекламы, а&nbsp;не&nbsp;продажи.</span></div>
-<div class="card"><b>Магистрант по&nbsp;направлению «Дизайн»</b><span>Автор научных статей, рецензируемые публикации в&nbsp;РИНЦ.</span></div>
+<div class="card"><b>Реклама, которая приводит людей на&nbsp;сайт</b><span>Запускаю таргетированную рекламу во&nbsp;ВКонтакте и&nbsp;Яндекс Директ: за&nbsp;кампании 2026 года свыше 219&nbsp;000 показов и&nbsp;11&nbsp;700 переходов, даже с&nbsp;небольшим бюджетом. Это показатели рекламы, а&nbsp;не&nbsp;продажи.</span></div>
+<div class="card"><b>Победитель конкурсов</b><span>Награды профессиональных конкурсов по&nbsp;дизайну и&nbsp;брендингу.</span></div>
+<div class="card"><b>Опыт работы с&nbsp;крупными компаниями</b><span>Делал проекты для&nbsp;крупных российских брендов.</span></div>
+<div class="card"><b>Магистрант и&nbsp;автор статей</b><span>Магистрант по&nbsp;направлению «Дизайн», публикации в&nbsp;рецензируемых изданиях РИНЦ.</span></div>
 </section>
 
 <section class="card dark r-cta-card" id="contact">
-  <p class="label">[ контакты ]</p>
-  <h2>Давайте обсудим вашу задачу</h2>
-  <p>Опишите её в&nbsp;нескольких предложениях. Первое обсуждение без обязательств.</p>
-  <div class="r-cta"><a class="btn btn-lime" href="https://t.me/g_andl" target="_blank" rel="noopener">Написать в&nbsp;Telegram →</a><a class="btn btn-out" href="/#cases">Смотреть работы</a></div>
+  <div class="r-cta-l">
+    <p class="label">[ контакты ]</p>
+    <h2>Давайте обсудим сотрудничество</h2>
+    <p>Опишите вакансию или задачу в&nbsp;нескольких предложениях.<br>Первое обсуждение без&nbsp;обязательств.</p>
+    <div class="r-cta"><a class="btn btn-lime" href="https://t.me/g_andl" target="_blank" rel="noopener">Написать в&nbsp;Telegram →</a><a class="btn btn-out" href="mailto:g_andl@list.ru">Написать на&nbsp;почту</a></div>
+  </div>
+  <div class="r-links">
+    <a href="https://t.me/g_andl" target="_blank" rel="noopener"><span>Telegram</span><b>@g_andl ↗</b></a>
+    <a href="https://vk.com/g_andl" target="_blank" rel="noopener"><span>ВКонтакте</span><b>vk.com/g_andl ↗</b></a>
+    <a href="https://www.behance.net/g_andl" target="_blank" rel="noopener"><span>Behance</span><b>g_andl ↗</b></a>
+    <a href="mailto:g_andl@list.ru"><span>Почта</span><b>g_andl@list.ru</b></a>
+  </div>
 </section>
 
 <section class="card legal-card" id="legal">
@@ -506,15 +537,4 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
 </section>
 <div class="legal"><span>© 2026 Георгий Андюл. Все права защищены. <br>Копирование и использование дизайна, текстов, изображений и кода сайта без письменного согласия правообладателя запрещено (ст. 1270 и 1301 ГК РФ).</span></div>
 </div>
-<script>
-(function(){
-  var b=document.getElementById('burger'),m=document.getElementById('mnav');
-  if(!b||!m)return;
-  function set(o){b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'Закрыть меню':'Открыть меню');m.hidden=!o}
-  b.addEventListener('click',function(){set(m.hidden)});
-  m.addEventListener('click',function(e){if(e.target.tagName==='A')set(false)});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
-  window.addEventListener('resize',function(){if(innerWidth>960)set(false)});
-})();
-</script>
 </body></html>
