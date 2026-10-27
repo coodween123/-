@@ -364,9 +364,9 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
 
 .promo-pop{position:fixed;right:20px;bottom:24px;z-index:60;width:300px;padding:18px 20px 16px;border-radius:24px;background:var(--black);color:var(--on-black);box-shadow:0 18px 48px rgba(0,0,0,.32);overflow:hidden;opacity:0;transform:translateX(28px);pointer-events:none;transition:opacity .4s,transform .4s}
 .promo-pop.show{opacity:1;transform:none;pointer-events:auto}
-.promo-pop .art{position:absolute;right:-26px;top:-26px;width:130px;height:130px;pointer-events:none}
+.promo-pop .art{position:absolute;right:-30px;bottom:34px;width:120px;height:120px;pointer-events:none;opacity:.85}
 .promo-pop .tag{position:relative;font-family:var(--mono);font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:var(--on-black-mute)}
-.promo-pop b{position:relative;display:block;margin-top:8px;font-size:19px;font-weight:600;line-height:1.2;letter-spacing:-.02em;padding-right:36px}
+.promo-pop b{position:relative;display:block;margin-top:8px;font-size:19px;font-weight:600;line-height:1.2;letter-spacing:-.02em;padding-right:30px}
 .promo-pop p{position:relative;margin-top:6px;font-size:13px;line-height:1.35;color:var(--on-black-mute)}
 .promo-pop .pr{position:relative;display:flex;align-items:baseline;gap:10px;margin-top:12px}
 .promo-pop .pr strong{font-size:28px;font-weight:600;letter-spacing:-.04em;color:var(--lime);line-height:1}
@@ -380,7 +380,7 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
 .promo-pop.run .bars i::after{animation:pdrain 1s linear forwards;animation-delay:calc(var(--k)*1s)}
 @keyframes pdrain{to{transform:scaleX(0)}}
 .promo-pop .left{position:relative;margin-top:7px;font-family:var(--mono);font-size:11px;color:var(--on-black-mute)}
-@media (max-width:640px){.promo-pop{right:10px;bottom:12px;width:min(236px,calc(100vw - 20px));padding:14px 16px 13px;border-radius:20px}.promo-pop b{font-size:16px}.promo-pop .pr strong{font-size:22px}.promo-pop .art{width:100px;height:100px;right:-22px;top:-22px}}
+@media (max-width:640px){.promo-pop{right:10px;bottom:12px;width:min(236px,calc(100vw - 20px));padding:14px 16px 13px;border-radius:20px}.promo-pop b{font-size:16px}.promo-pop .pr strong{font-size:22px}.promo-pop .art{width:90px;height:90px;right:-24px;bottom:30px}}
 @media (prefers-reduced-motion:reduce){.promo-pop{transition:none;transform:none}}
 </style>
 </head><body>
@@ -455,7 +455,7 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
 </section>
 
 <!-- SERVICES -->
-<div class="sec-head" id="services"><div><p class="label" style="margin-bottom:14px">[ услуги и цены ]</p><h2>Сайт под ключ</h2></div><p>Хостинг бесплатный, платите только за домен.</p></div>
+<div class="sec-head" id="services"><div><p class="label" style="margin-bottom:14px">[ услуги и цены ]</p><h2>Сайт под ключ</h2></div><p>Хостинг бесплатный.</p></div>
 <section class="bento">
   <article class="card svc s1">
     <div class="row"><div><h3>Одностраничный сайт</h3><p>Одна страница под одну задачу: услуга, запуск, мероприятие или портфолио.</p></div><a class="arrow" href="https://t.me/g_andl" aria-label="Заказать сайт"><svg viewBox="0 0 16 16"><path d="M3 13L13 3M5 3h8v8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a></div>
@@ -546,7 +546,7 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
       <div class="tp"><b>Изучаю материалы</b>Собираю аргументы и сведения для страницы</div>
       <div class="tp"><b>Выбираем стиль</b>Показываю мудборд, согласовываем направление</div>
       <div class="tp"><b>Структура и тексты</b>Блоки, преимущества, призывы к действию</div>
-      <div class="tp l"><b>Сборка и запуск</b>Проверка на телефоне и компьютере, публикация, домен</div>
+      <div class="tp l"><b>Сборка и запуск</b>Проверка на телефоне и компьютере, публикация</div>
     </div>
   </div>
 </section>
@@ -563,16 +563,16 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
       <div class="foot"><span class="p">Правки: 3 бесплатно, затем 2 000 ₽ за 3</span><a class="btn btn-ink" href="https://t.me/g_andl">Оставить заявку</a></div>
     </article>
     </div>
-  <p class="tilda-note">Хостинг на GitHub Pages бесплатный. Домен стоит несколько сотен рублей в год, подключение домена и запуск на мне.</p>
+  <p class="tilda-note">Хостинг на GitHub Pages бесплатный, размещение и запуск на мне.</p>
 </section>
 
 <!-- FAQ -->
 <section class="card faq" id="faq">
   <h2 style="margin-bottom:28px">Частые вопросы</h2>
-  <details><summary>Почему не сделать сайт в ИИ самому?</summary><p>Придётся выбрать нейросеть, платить за подписку или токены, учиться писать запросы, а потом ещё разместить сайт и настроить домен. Я беру это на себя: вы платите один раз и получаете готовый запущенный сайт.</p></details>
+  <details><summary>Почему не сделать сайт в ИИ самому?</summary><p>Придётся выбрать нейросеть, платить за подписку или токены, учиться писать запросы, а потом ещё разместить сайт. Я беру это на себя: вы платите один раз и получаете готовый запущенный сайт.</p></details>
   <details><summary>Почему дешевле, чем в студии?</summary><p>Работаю один и использую ИИ на рутине, поэтому затрат меньше. Тексты, дизайн и проверку делаю сам.</p></details>
   <details><summary>Что с правками?</summary><p>3 правки включены, каждые следующие 3 стоят 2 000 ₽. <br>Мои ошибки исправляю бесплатно 14 дней после сдачи.</p></details>
-  <details><summary>Где будет сайт и сколько это стоит?</summary><p>На GitHub Pages: хостинг бесплатный. Платите только за домен, подключить его помогу. <br>За&nbsp;доплату 5&nbsp;000 ₽ могу перенести сайт на&nbsp;Тильду.</p></details>
+  <details><summary>Где будет сайт и сколько это стоит?</summary><p>На GitHub Pages: хостинг бесплатный. <br>За&nbsp;доплату 5&nbsp;000 ₽ могу перенести сайт на&nbsp;Тильду.</p></details>
   <details><summary>Сколько по времени?</summary><p>Зависит от задачи и материалов. Срок называю до начала работы.</p></details>
   <details><summary>Делаете магазины и большие сайты?</summary><p>Нет, только одностраничные сайты (лендинги). Для магазина или большого сайта лучше обратиться к другому специалисту.</p></details>
   <details><summary>Гарантируете продажи?</summary><p>Нет: они зависят ещё и от продукта, цены и трафика. Моя задача сделать страницу понятной и убедительной.</p></details>
