@@ -362,6 +362,17 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
 @keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-10px) rotate(2deg)}}
 .float{animation:float 7s ease-in-out infinite;transform-origin:center}
 
+.promo-pop{position:fixed;right:16px;bottom:24px;z-index:60;width:230px;padding:14px 16px 14px;border-radius:20px;background:var(--black);color:var(--on-black);box-shadow:0 12px 36px rgba(0,0,0,.28);opacity:0;transform:translateX(24px);pointer-events:none;transition:opacity .35s,transform .35s}
+.promo-pop.show{opacity:1;transform:none;pointer-events:auto}
+.promo-pop b{display:block;font-size:15px;font-weight:600;line-height:1.25;padding-right:22px}
+.promo-pop span{display:block;margin-top:4px;font-size:14px;color:var(--lime);font-weight:600}
+.promo-pop .x{position:absolute;top:8px;right:8px;width:24px;height:24px;border:0;border-radius:50%;background:rgba(255,255,255,.12);color:var(--on-black);font-size:15px;line-height:1;cursor:pointer;display:grid;place-items:center;padding:0}
+.promo-pop .x:hover{background:rgba(255,255,255,.22)}
+.promo-pop .bars{display:flex;gap:3px;margin-top:12px}
+.promo-pop .bars i{flex:1;height:4px;border-radius:2px;background:var(--lime);transition:background .3s}
+.promo-pop .bars i.off{background:rgba(255,255,255,.18)}
+@media (max-width:640px){.promo-pop{right:10px;bottom:12px;width:min(210px,calc(100vw - 20px));padding:12px 14px}.promo-pop b{font-size:14px}}
+@media (prefers-reduced-motion:reduce){.promo-pop{transition:none;transform:none}}
 </style>
 </head><body>
 
@@ -699,6 +710,33 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
     if(history.replaceState)history.replaceState(null,'',a.getAttribute('href'));
   });
   requestAnimationFrame(tick);
+})();
+</script>
+<div class="promo-pop" id="promoPop" role="status" aria-live="polite"><button class="x" type="button" aria-label="Закрыть">×</button><b>Скидка первым 5 клиентам</b><span>потом 20&nbsp;999&nbsp;₽</span><div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+<script>
+(function(){
+  var pop=document.getElementById('promoPop'),sec=document.querySelector('section.price');
+  if(!pop||!sec||!('IntersectionObserver' in window))return;
+  var KEY='promo5seen';
+  try{if(localStorage.getItem(KEY))return}catch(e){}
+  var bars=pop.querySelectorAll('.bars i'),t=null,shown=false;
+  function close(){pop.classList.remove('show');if(t){clearInterval(t);t=null}}
+  function open(){
+    if(shown)return;shown=true;
+    try{localStorage.setItem(KEY,'1')}catch(e){}
+    pop.classList.add('show');
+    var n=0;
+    t=setInterval(function(){
+      if(n<bars.length)bars[bars.length-1-n].classList.add('off');
+      n++;
+      if(n>=bars.length)close();
+    },1000);
+  }
+  pop.querySelector('.x').addEventListener('click',close);
+  var io=new IntersectionObserver(function(es){
+    if(es[0].isIntersecting){open();io.disconnect()}
+  },{threshold:.25});
+  io.observe(sec);
 })();
 </script>
 </body></html>
