@@ -425,14 +425,14 @@ html.is-loading{overflow:hidden}
 #loader .tb i{width:7px;height:7px;border-radius:50%;background:#3A3A40}
 #loader .tb span{flex:1;height:8px;border-radius:4px;background:#232327;margin-left:8px}
 #loader .bk{border-radius:10px;background:#232327;opacity:0;animation:ldpop 3.2s ease-in-out infinite}
-#loader .hero{flex:1.25;position:relative;overflow:hidden;background:#141416;animation-delay:.1s}
-#loader .hero em{position:absolute;left:14px;top:14px;width:46px;height:46px;border-radius:50%;border:7px solid #D9DADF;border-right-color:transparent;animation:ldspin 1.2s linear infinite}
-#loader .hero b{position:absolute;left:50px;top:8px;width:14px;height:14px;border-radius:50%;background:#FFD21F;animation:ldbob 1.1s ease-in-out infinite}
-#loader .hero u{position:absolute;right:14px;bottom:14px;width:46%;height:9px;border-radius:5px;background:#2F2F34;box-shadow:0 -16px 0 #2F2F34}
-#loader .row{display:flex;gap:8px;flex:1}
-#loader .row .bk{flex:1}
-#loader .row .bk:nth-child(1){animation-delay:.9s}
-#loader .row .bk:nth-child(2){animation-delay:1.3s;background:#FFD21F}
+#loader .lhero{flex:1.25;position:relative;overflow:hidden;background:#141416;animation-delay:.1s}
+#loader .lhero em{position:absolute;left:14px;top:14px;width:46px;height:46px;border-radius:50%;border:7px solid #D9DADF;border-right-color:transparent;animation:ldspin 1.2s linear infinite}
+#loader .lhero b{position:absolute;left:50px;top:8px;width:14px;height:14px;border-radius:50%;background:#FFD21F;animation:ldbob 1.1s ease-in-out infinite}
+#loader .lhero u{position:absolute;right:14px;bottom:14px;width:46%;height:9px;border-radius:5px;background:#2F2F34;box-shadow:0 -16px 0 #2F2F34}
+#loader .lrow{display:flex;gap:8px;flex:1}
+#loader .lrow .bk{flex:1}
+#loader .lrow .bk:nth-child(1){animation-delay:.9s}
+#loader .lrow .bk:nth-child(2){animation-delay:1.3s;background:#FFD21F}
 #loader .cur{position:absolute;left:0;top:0;width:20px;height:20px;animation:ldcur 3.2s ease-in-out infinite;filter:drop-shadow(0 2px 4px rgba(0,0,0,.6))}
 #loader .nm{font-weight:600;font-size:19px;letter-spacing:-.02em}
 #loader .ph{min-height:20px;font-family:var(--mono);font-size:13px;color:#9A9AA4;text-align:center}
@@ -446,11 +446,11 @@ html.is-loading{overflow:hidden}
 @keyframes ldblink{50%{opacity:0}}
 @keyframes ldpop{0%{opacity:0;transform:translateY(10px) scale(.9)}14%,82%{opacity:1;transform:none}96%,100%{opacity:0;transform:translateY(-6px) scale(.97)}}
 @keyframes ldcur{0%{transform:translate(220px,150px)}18%{transform:translate(60px,50px)}30%{transform:translate(60px,50px) scale(.8)}34%{transform:translate(60px,50px)}52%{transform:translate(120px,120px)}60%{transform:translate(120px,120px) scale(.8)}64%{transform:translate(120px,120px)}85%{transform:translate(230px,125px)}100%{transform:translate(260px,170px)}}
-@media (prefers-reduced-motion:reduce){#loader .bk,#loader .hero em,#loader .hero b,#loader .cur{animation:none;opacity:1}#loader .ph::after{animation:none}}
+@media (prefers-reduced-motion:reduce){#loader .bk,#loader .lhero em,#loader .lhero b,#loader .cur{animation:none;opacity:1}#loader .ph::after{animation:none}}
 </style>
 </head><body>
 <div id="loader" role="status" aria-live="polite"><div class="ld">
-<div class="win" aria-hidden="true"><div class="tb"><i></i><i></i><i></i><span></span></div><div class="bk hero"><em></em><b></b><u></u></div><div class="row"><div class="bk"></div><div class="bk"></div></div>
+<div class="win" aria-hidden="true"><div class="tb"><i></i><i></i><i></i><span></span></div><div class="bk lhero"><em></em><b></b><u></u></div><div class="lrow"><div class="bk"></div><div class="bk"></div></div>
 <svg class="cur" viewBox="0 0 20 20"><path d="M3 2l13 6.5-5.5 1.8L8.2 16z" fill="#fff" stroke="#0B0B0D" stroke-width="1.2" stroke-linejoin="round"/></svg></div>
 <div class="nm">Георгий Андюл</div><div class="ph" id="ldPh"></div>
 <div class="pc"><div class="bar" aria-hidden="true"><i id="ldBar"></i></div><div class="n" id="ldN">0%</div></div>
