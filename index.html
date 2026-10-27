@@ -130,7 +130,6 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
 .word::after{content:"АНДЮЛ";position:absolute;left:0;top:0;white-space:nowrap;background:none;-webkit-text-fill-color:#fff;color:#fff;opacity:0;transition:opacity .3s;pointer-events:none;
   -webkit-mask-image:radial-gradient(circle 170px at var(--mx,50%) var(--my,50%),#000 0,#000 30%,transparent 100%);mask-image:radial-gradient(circle 170px at var(--mx,50%) var(--my,50%),#000 0,#000 30%,transparent 100%)}
 .word.hov::after{opacity:1}
-@media (hover:none){.word::after{-webkit-mask-image:radial-gradient(circle 70px at var(--mx,50%) var(--my,50%),#000 0,rgba(0,0,0,.55) 35%,transparent 100%);mask-image:radial-gradient(circle 70px at var(--mx,50%) var(--my,50%),#000 0,rgba(0,0,0,.55) 35%,transparent 100%)}.word.hov::after{opacity:.8}}
 @media (prefers-reduced-motion:reduce){.rv,.hero-copy>*,.facts .fact,.hero-art circle:first-of-type{animation:none!important;transition:none!important}.js .rv:not(.in){opacity:1;transform:none}}
 .lead.dark .lead-sub{color:var(--on-black-mute)}
 .lead .lead-sub{font-size:16px;line-height:1.5;color:var(--mute);margin-top:16px;letter-spacing:0;font-weight:400}
@@ -783,20 +782,6 @@ html.is-loading{overflow:hidden}
   if(w&&window.matchMedia&&matchMedia('(hover:hover)').matches){
     w.addEventListener('pointermove',function(e){var r=w.getBoundingClientRect();w.style.setProperty('--mx',(e.clientX-r.left)+'px');w.style.setProperty('--my',(e.clientY-r.top)+'px');w.classList.add('hov')});
     w.addEventListener('pointerleave',function(){w.classList.remove('hov')});
-  }else if(w&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){
-    var run=false,t0=0;
-    var glow=function(t){
-      if(!run)return;
-      if(!t0)t0=t;
-      var r=w.getBoundingClientRect(),k=(t-t0)/1000,W=r.width,H=r.height;
-      w.style.setProperty('--mx',(W*(.5+.5*Math.sin(k*.45)))+'px');
-      w.style.setProperty('--my',(H*(.5+.22*Math.sin(k*.9)))+'px');
-      requestAnimationFrame(glow);
-    };
-    new IntersectionObserver(function(es){
-      run=es[0].isIntersecting;
-      if(run){w.classList.add('hov');t0=0;requestAnimationFrame(glow)}else{w.classList.remove('hov')}
-    },{threshold:.2}).observe(w);
   }
 })();
 </script>
