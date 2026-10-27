@@ -362,16 +362,25 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
 @keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-10px) rotate(2deg)}}
 .float{animation:float 7s ease-in-out infinite;transform-origin:center}
 
-.promo-pop{position:fixed;right:16px;bottom:24px;z-index:60;width:230px;padding:14px 16px 14px;border-radius:20px;background:var(--black);color:var(--on-black);box-shadow:0 12px 36px rgba(0,0,0,.28);opacity:0;transform:translateX(24px);pointer-events:none;transition:opacity .35s,transform .35s}
+.promo-pop{position:fixed;right:20px;bottom:24px;z-index:60;width:300px;padding:18px 20px 16px;border-radius:24px;background:var(--black);color:var(--on-black);box-shadow:0 18px 48px rgba(0,0,0,.32);overflow:hidden;opacity:0;transform:translateX(28px);pointer-events:none;transition:opacity .4s,transform .4s}
 .promo-pop.show{opacity:1;transform:none;pointer-events:auto}
-.promo-pop b{display:block;font-size:15px;font-weight:600;line-height:1.25;padding-right:22px}
-.promo-pop span{display:block;margin-top:4px;font-size:14px;color:var(--lime);font-weight:600}
-.promo-pop .x{position:absolute;top:8px;right:8px;width:24px;height:24px;border:0;border-radius:50%;background:rgba(255,255,255,.12);color:var(--on-black);font-size:15px;line-height:1;cursor:pointer;display:grid;place-items:center;padding:0}
-.promo-pop .x:hover{background:rgba(255,255,255,.22)}
-.promo-pop .bars{display:flex;gap:3px;margin-top:12px}
-.promo-pop .bars i{flex:1;height:4px;border-radius:2px;background:var(--lime);transition:background .3s}
-.promo-pop .bars i.off{background:rgba(255,255,255,.18)}
-@media (max-width:640px){.promo-pop{right:10px;bottom:12px;width:min(210px,calc(100vw - 20px));padding:12px 14px}.promo-pop b{font-size:14px}}
+.promo-pop .art{position:absolute;right:-26px;top:-26px;width:130px;height:130px;pointer-events:none}
+.promo-pop .tag{position:relative;font-family:var(--mono);font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:var(--on-black-mute)}
+.promo-pop b{position:relative;display:block;margin-top:8px;font-size:19px;font-weight:600;line-height:1.2;letter-spacing:-.02em;padding-right:36px}
+.promo-pop p{position:relative;margin-top:6px;font-size:13px;line-height:1.35;color:var(--on-black-mute)}
+.promo-pop .pr{position:relative;display:flex;align-items:baseline;gap:10px;margin-top:12px}
+.promo-pop .pr strong{font-size:28px;font-weight:600;letter-spacing:-.04em;color:var(--lime);line-height:1}
+.promo-pop .pr span{font-size:13px;color:var(--on-black-mute)}
+.promo-pop .pr s{text-decoration-thickness:2px}
+.promo-pop .x{position:absolute;top:10px;right:10px;z-index:2;width:26px;height:26px;border:0;border-radius:50%;background:rgba(255,255,255,.14);color:var(--on-black);font-size:16px;line-height:1;cursor:pointer;display:grid;place-items:center;padding:0}
+.promo-pop .x:hover{background:rgba(255,255,255,.26)}
+.promo-pop .bars{position:relative;display:flex;gap:3px;margin-top:14px}
+.promo-pop .bars i{position:relative;flex:1;height:5px;border-radius:3px;background:rgba(255,255,255,.16);overflow:hidden}
+.promo-pop .bars i::after{content:"";position:absolute;inset:0;background:var(--lime);transform-origin:left;transform:scaleX(1)}
+.promo-pop.run .bars i::after{animation:pdrain 1s linear forwards;animation-delay:calc(var(--k)*1s)}
+@keyframes pdrain{to{transform:scaleX(0)}}
+.promo-pop .left{position:relative;margin-top:7px;font-family:var(--mono);font-size:11px;color:var(--on-black-mute)}
+@media (max-width:640px){.promo-pop{right:10px;bottom:12px;width:min(236px,calc(100vw - 20px));padding:14px 16px 13px;border-radius:20px}.promo-pop b{font-size:16px}.promo-pop .pr strong{font-size:22px}.promo-pop .art{width:100px;height:100px;right:-22px;top:-22px}}
 @media (prefers-reduced-motion:reduce){.promo-pop{transition:none;transform:none}}
 </style>
 </head><body>
@@ -712,25 +721,28 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
   requestAnimationFrame(tick);
 })();
 </script>
-<div class="promo-pop" id="promoPop" role="status" aria-live="polite"><button class="x" type="button" aria-label="Закрыть">×</button><b>Скидка первым 5 клиентам</b><span>потом 20&nbsp;999&nbsp;₽</span><div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+<div class="promo-pop" id="promoPop" role="status" aria-live="polite">
+<svg class="art" viewBox="0 0 130 130" aria-hidden="true"><defs><linearGradient id="pg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6b6b74"/><stop offset=".5" stop-color="#e9e9ee"/><stop offset="1" stop-color="#4a4a52"/></linearGradient></defs><circle cx="70" cy="62" r="34" fill="none" stroke="url(#pg)" stroke-width="16" opacity=".9"/><circle cx="104" cy="30" r="12" fill="#FFD21F"/></svg>
+<button class="x" type="button" aria-label="Закрыть">×</button>
+<div class="tag">[ акция ]</div>
+<b>Скидка на сайт под ключ</b>
+<p>Одностраничный сайт со&nbsp;скидкой первым 5&nbsp;клиентам</p>
+<div class="pr"><strong>15&nbsp;999&nbsp;₽</strong><span>потом <s>20&nbsp;999&nbsp;₽</s></span></div>
+<div class="bars"><i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i><i style="--k:4"></i><i style="--k:5"></i><i style="--k:6"></i><i style="--k:7"></i><i style="--k:8"></i><i style="--k:9"></i></div>
+<div class="left">закроется через <span id="promoLeft">10</span> с</div>
+</div>
 <script>
 (function(){
   var pop=document.getElementById('promoPop'),sec=document.querySelector('section.price');
   if(!pop||!sec||!('IntersectionObserver' in window))return;
-  var KEY='promo5seen';
-  try{if(localStorage.getItem(KEY))return}catch(e){}
-  var bars=pop.querySelectorAll('.bars i'),t=null,shown=false;
-  function close(){pop.classList.remove('show');if(t){clearInterval(t);t=null}}
+  var left=document.getElementById('promoLeft'),T=10000,tick=null,end=null,shown=false;
+  function close(){pop.classList.remove('show');clearInterval(tick);clearTimeout(end)}
   function open(){
     if(shown)return;shown=true;
-    try{localStorage.setItem(KEY,'1')}catch(e){}
-    pop.classList.add('show');
-    var n=0;
-    t=setInterval(function(){
-      if(n<bars.length)bars[bars.length-1-n].classList.add('off');
-      n++;
-      if(n>=bars.length)close();
-    },1000);
+    var t0=Date.now();
+    pop.classList.add('show','run');
+    tick=setInterval(function(){left.textContent=Math.max(0,Math.ceil((T-(Date.now()-t0))/1000))},200);
+    end=setTimeout(close,T);
   }
   pop.querySelector('.x').addEventListener('click',close);
   var io=new IntersectionObserver(function(es){
