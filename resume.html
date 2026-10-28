@@ -35,7 +35,7 @@
 :root{
   --bg:#EEEEF1; --card:#FFFFFF; --soft:#E4E4E9; --ink:#131316; --mute:#7C7C86; --line:#D6D6DC;
   --black:#141416; --on-black:#F4F4F6; --on-black-mute:#9A9AA4; --lime:#FFD21F; --on-lime:#131316;
-  --font:'Onest',system-ui,-apple-system,'Segoe UI',sans-serif; --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --font:'Onest',system-ui,-apple-system,'Segoe UI',sans-serif; --mono:'Onest',system-ui,-apple-system,'Segoe UI',sans-serif;
   --r:28px;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
@@ -201,7 +201,7 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
 .case .vis img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .case .meta{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;padding:0 8px}
 .case h3{font-size:18px;letter-spacing:-.015em}
-.case .tag{font-family:var(--mono);font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.04em;padding:0 8px}
+.case .tag{font-family:var(--mono);font-size:12px;color:var(--mute);letter-spacing:0;padding:0 8px}
 .case.more{grid-column:1/-1;flex-direction:row;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;background:var(--black);color:var(--on-black);padding:32px 36px;min-height:0;position:relative;overflow:hidden}
 .case.more .label{color:var(--on-black-mute);margin-bottom:12px}
 .case.more h3{font-size:clamp(24px,2.6vw,34px);max-width:260px}
@@ -484,7 +484,7 @@ html.js .rv.in{opacity:1;transform:none}
   <figure class="r-photo"><img src="/me.jpg" alt="Георгий Андюл, графический и веб-дизайнер" width="1200" height="1200" fetchpriority="high"></figure>
   <div class="r-h-text">
     <span class="r-open"><i></i>Открыт к предложениям</span>
-    <p class="label">[ резюме ]</p>
+    <p class="label">[ Резюме ]</p>
     <h1>Георгий Андюл</h1>
     <div class="r-role2">Графический и&nbsp;веб-дизайнер</div>
     <p class="r-lead2">Пять лет делаю визуал, который работает на&nbsp;бизнес: соцсети, сайты и&nbsp;рекламные креативы для&nbsp;вуза, агентств и&nbsp;брендов. Быстро вхожу в&nbsp;задачу и&nbsp;довожу работу до&nbsp;результата.</p>
@@ -493,7 +493,7 @@ html.js .rv.in{opacity:1;transform:none}
   </div>
 </section>
 
-<div class="sec-head"><div><p class="label" style="margin-bottom:14px">[ чем могу помочь ]</p><h2>Что делаю</h2></div></div>
+<div class="sec-head"><div><p class="label" style="margin-bottom:14px">[ Чем могу помочь ]</p><h2>Что делаю</h2></div></div>
 <section class="r-grid">
 <div class="card r-tile"><span class="n">01</span><h3>Сайты и лендинги под ключ</h3><p>Исследование, структура, продающий текст, дизайн и&nbsp;запуск.</p></div>
 <div class="card r-tile"><span class="n">02</span><h3>Оформление соцсетей</h3><p>Единый стиль, обложки, посты и&nbsp;баннеры.</p></div>
@@ -501,7 +501,7 @@ html.js .rv.in{opacity:1;transform:none}
 <div class="card r-tile"><span class="n">04</span><h3>Упаковка и&nbsp;продукция</h3><p>Упаковка продуктовой линейки, материалы для мероприятий.</p></div>
 </section>
 
-<div class="sec-head" id="experience"><div><p class="label" style="margin-bottom:14px">[ опыт работы ]</p><h2>Где работал</h2></div></div>
+<div class="sec-head" id="experience"><div><p class="label" style="margin-bottom:14px">[ Опыт работы ]</p><h2>Где работал</h2></div></div>
 <section class="jobs">
 <article class="card job"><div class="when">Сентябрь 2021 —<br>октябрь 2026</div><div><h3>КГПИ КемГУ</h3><div class="role">Графический и&nbsp;веб-дизайнер</div><p>Веду визуальную часть вуза: оформляю соцсети, делаю сайты и&nbsp;рекламные креативы. Пять лет в&nbsp;одной команде, от&nbsp;постов до&nbsp;кампаний набора.</p></div><a class="go" href="https://кгпи.рф" target="_blank" rel="noopener">кгпи.рф <svg viewBox="0 0 16 16"><path d="M3 13L13 3M5 3h8v8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a></article>
 <article class="card job"><div class="when">Декабрь 2024 —<br>апрель 2025<br></div><div><h3>Студия профориентации Юлии Хайминой</h3><div class="role">Графический дизайнер</div><p>Оформление соцсетей, баннеры и&nbsp;продукция для проведения мероприятий.</p></div><a class="go" href="https://vk.com/haymina_prof" target="_blank" rel="noopener">vk.com/haymina_prof <svg viewBox="0 0 16 16"><path d="M3 13L13 3M5 3h8v8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a></article>
@@ -510,13 +510,13 @@ html.js .rv.in{opacity:1;transform:none}
 <article class="card job"><div class="when">Октябрь 2024 —<br>декабрь 2024<br></div><div><h3>Павел Пресняков</h3><div class="role">Графический дизайнер</div><p>Рекламные креативы для&nbsp;ВКонтакте и&nbsp;Telegram.</p></div><a class="go" href="https://presnyakovp.ru" target="_blank" rel="noopener">presnyakovp.ru <svg viewBox="0 0 16 16"><path d="M3 13L13 3M5 3h8v8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a></article>
 </section>
 
-<div class="sec-head"><div><p class="label" style="margin-bottom:14px">[ навыки ]</p><h2>Инструменты и&nbsp;отрасли</h2></div></div>
+<div class="sec-head"><div><p class="label" style="margin-bottom:14px">[ Навыки ]</p><h2>Инструменты и&nbsp;отрасли</h2></div></div>
 <section class="r-two">
 <div class="card r-box"><h3>Инструменты</h3><div class="pills"><span class="pill">Figma</span><span class="pill">Photoshop</span><span class="pill">Illustrator</span><span class="pill">PowerPoint</span><span class="pill">Tilda</span><span class="pill">Claude Code</span><span class="pill">ChatGPT</span><span class="pill">Recraft</span></div></div>
 <div class="card r-box"><h3>Отрасли, где работал</h3><div class="pills"><span class="pill">Криптовалюта</span><span class="pill">Личный бренд</span><span class="pill">Отдых</span><span class="pill">IT</span><span class="pill">Доставка</span><span class="pill">Тренерство</span><span class="pill">Медиа</span><span class="pill">Психология</span><span class="pill">Маркетинг</span></div></div>
 </section>
 
-<div class="sec-head"><div><p class="label" style="margin-bottom:14px">[ достижения ]</p><h2>Достижения</h2></div></div>
+<div class="sec-head"><div><p class="label" style="margin-bottom:14px">[ Достижения ]</p><h2>Достижения</h2></div></div>
 <section class="r-ach">
 <div class="card"><b>Реклама, которая<br>приводит на&nbsp;сайт</b><span>Запускаю таргетированную рекламу во&nbsp;ВКонтакте и&nbsp;Яндекс Директ: за&nbsp;кампании 2026 года свыше 219&nbsp;000 показов и&nbsp;11&nbsp;700 переходов, даже с&nbsp;небольшим бюджетом. Это показатели рекламы, а&nbsp;не&nbsp;продажи.</span></div>
 <div class="card"><b>Конкурсы<br>и&nbsp;выставки</b><span>Победитель «Вместе Медиа» 2024 в&nbsp;номинации «Лучший брендинг». Участник конкурсов «Полотно» и&nbsp;«Россия: взгляд в&nbsp;будущее», выставки «Русский стиль в&nbsp;зеркале нейронки».</span></div>
@@ -526,7 +526,7 @@ html.js .rv.in{opacity:1;transform:none}
 
 <section class="card dark r-cta-card" id="contact">
   <div class="r-cta-l">
-    <p class="label">[ контакты ]</p>
+    <p class="label">[ Контакты ]</p>
     <h2>Давайте обсудим сотрудничество</h2>
     <p>Опишите вакансию или задачу в&nbsp;нескольких предложениях.<br>Первое обсуждение без&nbsp;обязательств.</p>
     <div class="r-cta"><a class="btn btn-lime" href="https://t.me/g_andl" target="_blank" rel="noopener">Написать в&nbsp;Telegram →</a></div>

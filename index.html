@@ -47,7 +47,7 @@
 :root{
   --bg:#EEEEF1; --card:#FFFFFF; --soft:#E4E4E9; --ink:#131316; --mute:#7C7C86; --line:#D6D6DC;
   --black:#141416; --on-black:#F4F4F6; --on-black-mute:#9A9AA4; --lime:#FFD21F; --on-lime:#131316;
-  --font:'Onest',system-ui,-apple-system,'Segoe UI',sans-serif; --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --font:'Onest',system-ui,-apple-system,'Segoe UI',sans-serif; --mono:'Onest',system-ui,-apple-system,'Segoe UI',sans-serif;
   --r:28px;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
@@ -213,7 +213,7 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
 .case .vis img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .case .meta{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;padding:0 8px}
 .case h3{font-size:18px;letter-spacing:-.015em}
-.case .tag{font-family:var(--mono);font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.04em;padding:0 8px}
+.case .tag{font-family:var(--mono);font-size:12px;color:var(--mute);letter-spacing:0;padding:0 8px}
 .case.more{grid-column:1/-1;flex-direction:row;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;background:var(--black);color:var(--on-black);padding:32px 36px;min-height:0;position:relative;overflow:hidden}
 .case.more .label{color:var(--on-black-mute);margin-bottom:12px}
 .case.more h3{font-size:clamp(24px,2.6vw,34px);max-width:260px}
@@ -404,7 +404,7 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
 .promo-pop{position:fixed;right:20px;bottom:24px;z-index:60;width:300px;padding:18px 20px 16px;border-radius:24px;background:var(--black);color:var(--on-black);box-shadow:0 18px 48px rgba(0,0,0,.32);overflow:hidden;opacity:0;transform:translateX(28px);pointer-events:none;transition:opacity .4s,transform .4s}
 .promo-pop.show{opacity:1;transform:none;pointer-events:auto}
 .promo-pop.out{opacity:0;transform:none;pointer-events:none;transition:opacity 1s ease}
-.promo-pop .tag{position:relative;font-family:var(--mono);font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:var(--on-black-mute)}
+.promo-pop .tag{position:relative;font-family:var(--mono);font-size:11px;letter-spacing:0;color:var(--on-black-mute)}
 .promo-pop b{position:relative;display:block;margin-top:8px;font-size:19px;font-weight:600;line-height:1.2;letter-spacing:-.02em;padding-right:30px}
 .promo-pop p{position:relative;margin-top:6px;font-size:13px;line-height:1.35;color:var(--on-black-mute)}
 .promo-pop .pr{position:relative;display:flex;align-items:baseline;gap:10px;margin-top:12px}
@@ -541,7 +541,7 @@ html.is-loading{overflow:hidden}
 </section>
 
 <!-- BENEFITS -->
-<div class="sec-head"><div><p class="label" style="margin-bottom:14px">[ почему это удобно ]</p><h2>Вы рассказываете о задаче. Остальное беру на себя</h2></div></div>
+<div class="sec-head"><div><p class="label" style="margin-bottom:14px">[ Почему это удобно ]</p><h2>Вы рассказываете о задаче. Остальное беру на себя</h2></div></div>
 <section class="grid3">
   <article class="card ben">
     <svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><path d="M26 6c1.8 13.5 7.5 19.2 21 21-13.5 1.8-19.2 7.5-21 21-1.8-13.5-7.5-19.2-21-21 13.5-1.8 19.2-7.5 21-21z" fill="url(#chrome2)"/><path d="M49 36c.9 6.4 3.6 9.1 10 10-6.4.9-9.1 3.6-10 10-.9-6.4-3.6-9.1-10-10 6.4-.9 9.1-3.6 10-10z" fill="var(--lime)"/></svg>
@@ -558,7 +558,7 @@ html.is-loading{overflow:hidden}
 </section>
 
 <!-- SERVICES -->
-<div class="sec-head" id="services"><div><p class="label" style="margin-bottom:14px">[ услуги и цены ]</p><h2>Сайт под ключ</h2></div><p>Хостинг бесплатный.</p></div>
+<div class="sec-head" id="services"><div><p class="label" style="margin-bottom:14px">[ Услуги и цены ]</p><h2>Сайт под ключ</h2></div><p>Хостинг бесплатный.</p></div>
 <section class="bento">
   <article class="card svc s1">
     <div class="row"><div><h3>Одностраничный сайт</h3><p>Одна страница под одну задачу: услуга, запуск, мероприятие или портфолио.</p></div><a class="arrow" href="https://t.me/g_andl" aria-label="Заказать сайт"><svg viewBox="0 0 16 16"><path d="M3 13L13 3M5 3h8v8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a></div>
@@ -574,7 +574,7 @@ html.is-loading{overflow:hidden}
 </section>
 
 <!-- CASES -->
-<div class="sec-head" id="cases"><div><p class="label" style="margin-bottom:14px">[ мои дизайн-работы ]</p><h2>Дизайн-работы до ИИ</h2></div><a class="btn btn-ink" href="https://www.behance.net/g_andl" target="_blank" rel="noopener">Больше работ на Behance →</a></div>
+<div class="sec-head" id="cases"><div><p class="label" style="margin-bottom:14px">[ Мои дизайн-работы ]</p><h2>Дизайн-работы до ИИ</h2></div><a class="btn btn-ink" href="https://www.behance.net/g_andl" target="_blank" rel="noopener">Больше работ на Behance →</a></div>
 <section class="cases">
   <a class="case hov" href="https://www.behance.net/gallery/225764279/dizajn-sajta-chastnogo-detskogo-sada">
     <div class="vis"><img src="case1.jpg" alt="Сайт частного детского сада Bounty Kids Club" loading="lazy"></div>
@@ -594,7 +594,7 @@ html.is-loading{overflow:hidden}
 </section>
 
 <!-- ABOUT -->
-<div class="sec-head" id="about"><div><p class="label" style="margin-bottom:14px">[ обо мне ]</p><h2>Привет, я Георгий Андюл</h2></div></div>
+<div class="sec-head" id="about"><div><p class="label" style="margin-bottom:14px">[ Обо мне ]</p><h2>Привет, я Георгий Андюл</h2></div></div>
 <section class="about">
   <figure class="card photo" aria-label="Фото Георгия Андюла"><img loading="lazy" decoding="async" src="me.jpg" alt="Георгий Андюл"><figcaption class="pill lime">Георгий Андюл</figcaption></figure>
   <div class="about-r">
@@ -609,7 +609,7 @@ html.is-loading{overflow:hidden}
 </section>
 
 <!-- ADS -->
-<div class="sec-head" id="practice"><div><p class="label" style="margin-bottom:14px">[ практический опыт ]</p><h2>Умею не только делать сайты, но и приводить на них людей</h2></div><p>Свежие кейсы 2026 для КГПИ КемГУ, даже с небольшим бюджетом. <br>Это показатели рекламы, а не продажи.</p></div>
+<div class="sec-head" id="practice"><div><p class="label" style="margin-bottom:14px">[ Практический опыт ]</p><h2>Умею не только делать сайты, но и приводить на них людей</h2></div><p>Свежие кейсы 2026 для КГПИ КемГУ, даже с небольшим бюджетом. <br>Это показатели рекламы, а не продажи.</p></div>
 <section class="ads">
   <div class="card dark car" id="adsCar" aria-roledescription="карусель" aria-label="Рекламные кейсы">
     <div class="car-head">
@@ -640,7 +640,7 @@ html.is-loading{overflow:hidden}
 </section>
 
 <!-- PROCESS -->
-<div class="sec-head" id="process"><div><p class="label" style="margin-bottom:14px">[ как мы работаем ]</p><h2>От запроса до запуска</h2></div><p>Каждый этап согласуем с вами. <br>Техническое задание готовить не нужно.</p></div>
+<div class="sec-head" id="process"><div><p class="label" style="margin-bottom:14px">[ Как мы работаем ]</p><h2>От запроса до запуска</h2></div><p>Каждый этап согласуем с вами. <br>Техническое задание готовить не нужно.</p></div>
 <section class="card">
   <div class="tl">
     <div class="tl-cols"><i>этап 1</i><i>этап 2</i><i>этап 3</i><i>этап 4</i><i>этап 5</i></div>
@@ -684,7 +684,7 @@ html.is-loading{overflow:hidden}
 <!-- CONTACT -->
 <section class="card dark cta" id="contact">
   <div class="cta-top">
-    <div><p class="label" style="margin-bottom:18px">[ контакты ]</p><h2>Расскажите, что хотите запустить</h2><p class="cta-sub">Опишите задачу в нескольких предложениях. <br>Первое обсуждение без обязательств.</p></div>
+    <div><p class="label" style="margin-bottom:18px">[ Контакты ]</p><h2>Расскажите, что хотите запустить</h2><p class="cta-sub">Опишите задачу в нескольких предложениях. <br>Первое обсуждение без обязательств.</p></div>
     <div class="contacts">
       <a href="https://t.me/g_andl"><span>Telegram</span><span>@g_andl ↗</span></a>
       <a href="https://vk.com/g_andl"><span>ВКонтакте</span><span>vk.com/g_andl ↗</span></a>
@@ -826,7 +826,7 @@ html.is-loading{overflow:hidden}
 </script>
 <div class="promo-pop" id="promoPop" role="status" aria-live="polite">
 <button class="x" type="button" aria-label="Закрыть">×</button>
-<div class="tag">[ акция ]</div>
+<div class="tag">[ Акция ]</div>
 <b>Скидка на&nbsp;лендинг под&nbsp;ключ</b>
 <p>Одностраничный сайт для&nbsp;запуска, услуги или&nbsp;мероприятия.<br>Скидка первым 5&nbsp;клиентам</p>
 <div class="pr"><strong>15&nbsp;999&nbsp;₽</strong><span>потом&nbsp;<s>20&nbsp;999&nbsp;₽</s></span></div>
