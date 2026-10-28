@@ -441,17 +441,15 @@ html.is-loading{overflow:hidden}
 #loader .cur{position:absolute;left:0;top:0;width:20px;height:20px;animation:ldcur 3.2s ease-in-out infinite;filter:drop-shadow(0 2px 4px rgba(0,0,0,.6))}
 #loader .nm{font-weight:600;font-size:19px;letter-spacing:-.02em}
 #loader .ph{min-height:20px;font-family:var(--mono);font-size:13px;color:#9A9AA4;text-align:center}
-#loader .ph::after{content:"";display:inline-block;width:7px;height:14px;margin-left:3px;vertical-align:-2px;background:#FFD21F;animation:ldblink .8s steps(1) infinite}
 #loader .pc{display:flex;align-items:center;gap:12px;width:100%}
 #loader .bar{flex:1;height:4px;border-radius:2px;background:#2B2B30;overflow:hidden}
 #loader .bar i{display:block;height:100%;width:100%;background:#FFD21F;transform-origin:left;transform:scaleX(0)}
 #loader .n{font-family:var(--mono);font-size:12px;color:#9A9AA4;min-width:34px;text-align:right}
 @keyframes ldspin{to{transform:rotate(360deg)}}
 @keyframes ldbob{50%{transform:translate(-5px,6px)}}
-@keyframes ldblink{50%{opacity:0}}
 @keyframes ldpop{0%{opacity:0;transform:translateY(10px) scale(.9)}14%,82%{opacity:1;transform:none}96%,100%{opacity:0;transform:translateY(-6px) scale(.97)}}
 @keyframes ldcur{0%{transform:translate(220px,150px)}18%{transform:translate(60px,50px)}30%{transform:translate(60px,50px) scale(.8)}34%{transform:translate(60px,50px)}52%{transform:translate(120px,120px)}60%{transform:translate(120px,120px) scale(.8)}64%{transform:translate(120px,120px)}85%{transform:translate(230px,125px)}100%{transform:translate(260px,170px)}}
-@media (prefers-reduced-motion:reduce){#loader .bk,#loader .lhero em,#loader .lhero b,#loader .cur{animation:none;opacity:1}#loader .ph::after{animation:none}}
+@media (prefers-reduced-motion:reduce){#loader .bk,#loader .lhero em,#loader .lhero b,#loader .cur{animation:none;opacity:1}}
 </style>
 </head><body>
 <div id="loader" role="status" aria-live="polite"><div class="ld">
@@ -468,14 +466,9 @@ html.is-loading{overflow:hidden}
   de.classList.add('is-loading');
   var P=['Расставляю пиксели по\u00a0линейке','Уговариваю шрифты загрузиться','Наливаю кофе в\u00a0код','Полирую скругления до\u00a0блеска','Чешу затылок над\u00a0отступами','Проверяю, что кнопки нажимаются','Грею пиксели перед\u00a0показом'],pi=0,ci=0,t0=Date.now(),done=false,loaded=false,pct=0;
   var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function type(){
-    if(done)return;
-    var w=P[pi];
-    if(reduce){ph.textContent=w;return}
-    if(ci<=w.length){ph.textContent=w.slice(0,ci++);setTimeout(type,45)}
-    else{setTimeout(function(){pi=(pi+1)%P.length;ci=0;type()},900)}
-  }
-  type();
+  function show(){if(done)return;ph.textContent=P[pi];pi=(pi+1)%P.length}
+  show();
+  var pv=setInterval(show,650);
   var iv=setInterval(function(){
     var el=Date.now()-t0,target=loaded?100:Math.min(94,el/1800*94);
     pct+=(target-pct)*.2;if(loaded&&pct>99)pct=100;
@@ -483,7 +476,7 @@ html.is-loading{overflow:hidden}
     if(loaded&&v>=100){hide()}
   },50);
   function hide(){
-    if(done)return;done=true;clearInterval(iv);
+    if(done)return;done=true;clearInterval(iv);clearInterval(pv);
     bar.style.transform='scaleX(1)';nn.textContent='100%';
     L.classList.add('done');de.classList.remove('is-loading');
     setTimeout(function(){if(L.parentNode)L.parentNode.removeChild(L)},700);
