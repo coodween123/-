@@ -1,14 +1,13 @@
 <!doctype html>
-<html lang="ru"><head>
+<html lang="ru" data-theme="dark"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Резюме — Георгий Андюл, графический и веб-дизайнер</title>
 <meta name="description" content="Резюме Георгия Андюла: графический и веб-дизайнер, 5 лет опыта. Сайты под ключ, оформление соцсетей, рекламные креативы, упаковка. Опыт, навыки и контакты.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://andyul.ru/resume">
-<meta name="theme-color" content="#EEEEF1" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0B0B0D" media="(prefers-color-scheme: dark)">
-<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0B0B0D">
+<meta name="color-scheme" content="dark">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <meta property="og:type" content="profile">
@@ -459,13 +458,22 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
 .r-links span{font-size:14px;color:var(--on-black-mute)}
 .r-links b{font-size:18px;font-weight:500;color:var(--on-black)}
 .r-links a:hover b{color:var(--lime)}
-@media (max-width:960px){.r-hero2{grid-template-columns:1fr}.r-photo{order:-1;aspect-ratio:4/3;max-height:420px}.r-cta-card{grid-template-columns:1fr}}
-@media (max-width:640px){.r-facts{grid-template-columns:1fr}.r-top{padding-left:18px}.r-photo{aspect-ratio:1/1}}
+@media (max-width:960px){.r-hero2{grid-template-columns:1fr}.r-photo{order:-1;width:100%;aspect-ratio:auto;height:clamp(260px,50vw,420px)}.r-cta-card{grid-template-columns:1fr}}
+@media (max-width:640px){.r-facts{grid-template-columns:1fr}.r-top{padding-left:18px}.r-photo{aspect-ratio:1/1;height:auto}}
+
+.r-hero2{grid-template-columns:.8fr 1.2fr}
+.r-open{background:rgba(255,210,31,.16);color:var(--on-black)}
+.r-lead2{color:var(--on-black-mute)}
+.r-fact{background:rgba(255,255,255,.07)}
+.r-fact span{color:var(--on-black-mute)}
+.r-photo{background:#141416}
+@media (max-width:960px){.r-hero2{grid-template-columns:1fr}}
 </style>
 </head><body id="top">
 <div class="wrap">
 <div class="r-top"><b>Георгий Андюл</b><a class="btn btn-ink" href="/">← На главную</a></div>
-<section class="card r-hero2">
+<section class="card dark r-hero2">
+  <figure class="r-photo"><img src="/me.jpg" alt="Георгий Андюл, графический и веб-дизайнер" width="1200" height="1200" fetchpriority="high"></figure>
   <div class="r-h-text">
     <span class="r-open"><i></i>Открыт к предложениям</span>
     <p class="label">[ резюме ]</p>
@@ -473,9 +481,8 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
     <div class="r-role2">Графический и&nbsp;веб-дизайнер</div>
     <p class="r-lead2">Пять лет делаю визуал, который работает на&nbsp;бизнес: соцсети, сайты и&nbsp;рекламные креативы для&nbsp;вуза, агентств и&nbsp;брендов. Быстро вхожу в&nbsp;задачу и&nbsp;довожу работу до&nbsp;результата.</p>
     <div class="r-facts"><div class="r-fact"><b>5 лет</b><span>в&nbsp;графическом и&nbsp;веб-дизайне</span></div><div class="r-fact"><b>9 отраслей</b><span>от&nbsp;IT и&nbsp;криптовалюты до&nbsp;психологии</span></div><div class="r-fact"><b>Крупные бренды</b><span>опыт работы с&nbsp;известными компаниями</span></div></div>
-    <div class="r-cta"><a class="btn btn-ink" href="https://t.me/g_andl" target="_blank" rel="noopener">Написать в&nbsp;Telegram →</a><a class="btn btn-line" href="/#cases">Смотреть работы</a></div>
+    <div class="r-cta"><a class="btn btn-lime" href="https://t.me/g_andl" target="_blank" rel="noopener">Написать в&nbsp;Telegram →</a><a class="btn btn-out" href="/#cases">Смотреть работы</a></div>
   </div>
-  <figure class="r-photo"><img src="/me.jpg" alt="Георгий Андюл, графический и веб-дизайнер" width="1200" height="1200" fetchpriority="high"></figure>
 </section>
 
 <div class="sec-head"><div><p class="label" style="margin-bottom:14px">[ чем могу помочь ]</p><h2>Что делаю</h2></div></div>
@@ -503,10 +510,10 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
 
 <div class="sec-head"><div><p class="label" style="margin-bottom:14px">[ достижения ]</p><h2>Достижения</h2></div></div>
 <section class="r-ach">
-<div class="card"><b>Реклама, которая приводит людей на&nbsp;сайт</b><span>Запускаю таргетированную рекламу во&nbsp;ВКонтакте и&nbsp;Яндекс Директ: за&nbsp;кампании 2026 года свыше 219&nbsp;000 показов и&nbsp;11&nbsp;700 переходов, даже с&nbsp;небольшим бюджетом. Это показатели рекламы, а&nbsp;не&nbsp;продажи.</span></div>
-<div class="card"><b>Победитель конкурсов</b><span>Награды профессиональных конкурсов по&nbsp;дизайну и&nbsp;брендингу.</span></div>
-<div class="card"><b>Опыт работы с&nbsp;крупными компаниями</b><span>Делал проекты для&nbsp;крупных российских брендов.</span></div>
-<div class="card"><b>Магистрант и&nbsp;автор статей</b><span>Магистрант по&nbsp;направлению «Дизайн», публикации в&nbsp;рецензируемых изданиях РИНЦ.</span></div>
+<div class="card"><b>Реклама, которая<br>приводит на&nbsp;сайт</b><span>Запускаю таргетированную рекламу во&nbsp;ВКонтакте и&nbsp;Яндекс Директ: за&nbsp;кампании 2026 года свыше 219&nbsp;000 показов и&nbsp;11&nbsp;700 переходов, даже с&nbsp;небольшим бюджетом. Это показатели рекламы, а&nbsp;не&nbsp;продажи.</span></div>
+<div class="card"><b>Победитель<br>конкурсов</b><span>Награды профессиональных конкурсов по&nbsp;дизайну и&nbsp;брендингу.</span></div>
+<div class="card"><b>Опыт с&nbsp;крупными<br>компаниями</b><span>Делал проекты для&nbsp;крупных российских брендов.</span></div>
+<div class="card"><b>Магистрант<br>и&nbsp;автор статей</b><span>Магистрант по&nbsp;направлению «Дизайн», публикации в&nbsp;рецензируемых изданиях РИНЦ.</span></div>
 </section>
 
 <section class="card dark r-cta-card" id="contact">
@@ -514,7 +521,7 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
     <p class="label">[ контакты ]</p>
     <h2>Давайте обсудим сотрудничество</h2>
     <p>Опишите вакансию или задачу в&nbsp;нескольких предложениях.<br>Первое обсуждение без&nbsp;обязательств.</p>
-    <div class="r-cta"><a class="btn btn-lime" href="https://t.me/g_andl" target="_blank" rel="noopener">Написать в&nbsp;Telegram →</a><a class="btn btn-out" href="mailto:g_andl@list.ru">Написать на&nbsp;почту</a></div>
+    <div class="r-cta"><a class="btn btn-lime" href="https://t.me/g_andl" target="_blank" rel="noopener">Написать в&nbsp;Telegram →</a></div>
   </div>
   <div class="r-links">
     <a href="https://t.me/g_andl" target="_blank" rel="noopener"><span>Telegram</span><b>@g_andl ↗</b></a>
