@@ -471,6 +471,11 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
 @media (min-width:961px){.r-hero2{align-items:stretch}.r-photo{aspect-ratio:auto;position:relative;min-height:360px;height:auto}.r-photo img{position:absolute;inset:0}}
 @media (max-width:640px){.r-cta{flex-direction:column;align-items:stretch;width:100%}.r-cta .btn{width:100%;justify-content:center}}
 @media (max-width:640px){.r-role2{font-size:15px;padding:6px 14px;white-space:nowrap}}
+
+/* animation: плавное появление при прокрутке */
+html.js .rv{opacity:0;transform:translateY(26px);transition:opacity .75s cubic-bezier(.2,.7,.2,1),transform .75s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+html.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html.js .rv{opacity:1;transform:none;transition:none}}
 </style>
 </head><body id="top">
 <div class="wrap">
@@ -547,4 +552,15 @@ header.nav{background:var(--card);border-radius:999px;padding:8px;display:flex;a
 </section><!--/noindex-->
 <!--noindex--><div class="legal" data-nosnippet><span>© 2026 Георгий Андюл. Все права защищены. <br>Копирование и использование дизайна, текстов, изображений и кода сайта без письменного согласия правообладателя запрещено (ст. 1270 и 1301 ГК РФ).</span></div><!--/noindex-->
 </div>
+<script>
+(function(){var d=document,h=d.documentElement;h.classList.add('js');
+var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+var els=[].slice.call(d.querySelectorAll('.wrap>.sec-head,.wrap>.card,.r-grid>.card,.r-fact,.job,.r-ach>*')).filter(function(e){return !e.parentElement.closest('.rv')});
+els.forEach(function(e){e.classList.add('rv');var i=[].indexOf.call(e.parentElement.children,e);e.style.setProperty('--d',Math.min(i,5)*.08+'s')});
+function count(b){var t=parseInt(b.textContent,10);if(!t||rm)return;var s=null;(function f(ts){if(s===null)s=ts;var p=Math.min((ts-s)/1100,1);b.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(performance.now())}
+if(!('IntersectionObserver' in window)||rm){els.forEach(function(e){e.classList.add('in')});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');var b=x.target.matches('.nope')?x.target.querySelector('b'):null;if(b)count(b);io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+els.forEach(function(e){io.observe(e)});
+})();
+</script>
 </body></html>
