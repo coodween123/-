@@ -13,7 +13,7 @@
   var MOON='<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>';
   function init(){
     var st=d.createElement('style');
-    st.textContent='.theme-toggle{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));z-index:150;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;padding:0;cursor:pointer;background:var(--card,#fff);color:var(--ink,#131316);border:1px solid var(--line,#D6D6DC);box-shadow:0 8px 24px -8px rgba(0,0,0,.25);transition:transform .2s}.theme-toggle:hover{transform:scale(1.07)}.theme-toggle:focus-visible{outline:2px solid #FFD21F;outline-offset:3px}@media print{.theme-toggle{display:none}}';
+    st.textContent='.theme-toggle{position:fixed;left:max(16px,env(safe-area-inset-left,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));z-index:150;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;padding:0;cursor:pointer;background:var(--card,#fff);color:var(--ink,#131316);border:1px solid var(--line,#D6D6DC);box-shadow:0 8px 24px -8px rgba(0,0,0,.25);transition:transform .2s}.theme-toggle:hover{transform:scale(1.07)}.theme-toggle:focus-visible{outline:2px solid #FFD21F;outline-offset:3px}@media print{.theme-toggle{display:none}}';
     d.head.appendChild(st);
     var b=d.createElement('button');b.type='button';b.className='theme-toggle';
     function paint(){var dark=current()==='dark';b.innerHTML=dark?SUN:MOON;b.setAttribute('aria-label',dark?'Включить светлую тему':'Включить тёмную тему');b.title=dark?'Светлая тема':'Тёмная тема'}
